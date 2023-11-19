@@ -298,7 +298,7 @@ int DoOperation2(int x) => x switch
 };
 */
 
-
+/*
 // Домашняя работа. Калькулятор
 Console.WriteLine("Введите первое число: ");
 string? firstNumberString = Console.ReadLine();
@@ -413,5 +413,24 @@ switch (word)
         Console.WriteLine("Для такого слова нет перевода");
         break;
 }
+*/
+
+
+
+// Домашняя работа. Четность чисел первый вариант
+Console.WriteLine("Введите число: ");
+string? numberString = Console.ReadLine();
+
+int number1 = Convert.ToInt32(numberString);
+int result1 = number1 % 2;
+if (result1 == 0)
+{
+    Console.WriteLine("Число чётное");
+}
+else
+{
+    Console.WriteLine("Число нечётное");
+}
+
 
 
