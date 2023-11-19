@@ -298,6 +298,7 @@ int DoOperation2(int x) => x switch
 };
 */
 
+
 // Домашняя работа. Калькулятор
 Console.WriteLine("Введите первое число: ");
 string? firstNumberString = Console.ReadLine();
@@ -334,4 +335,38 @@ switch (operation)
         Console.WriteLine("Введены недопустимые операции");
         break;
         
+}
+
+
+// Домашнее задание. Промежутки чисел
+Console.WriteLine("Введите число от -50 до 50: ");
+string? number = Console.ReadLine();
+int numberInt = Convert.ToInt32(number);
+
+if (numberInt < -50 || numberInt > 50)
+{
+    Console.WriteLine("Некорректное число");
+}
+else if (numberInt <= -10 && numberInt >= -40)
+{
+    Console.WriteLine("Число попадает в промежуток [-40, -10]");
+} 
+else if (numberInt <= 0 && numberInt >= -9)
+{
+    Console.WriteLine("Число попадает в промежуток [-9, 0]");
+
+}
+else if (numberInt <= 10 && numberInt >= 1)
+{
+    Console.WriteLine("Число попадает в промежуток [1, 10]");
+
+}
+else if (numberInt <= 40 && numberInt >= 11)
+{
+    Console.WriteLine("Число попадает в промежуток [11, 40]");
+
+}
+else
+{
+    Console.WriteLine("Введенное число не попадает ни в один промежуток");
 }
