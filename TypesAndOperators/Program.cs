@@ -5,7 +5,7 @@
     /*
      Это сообщение будет выведено на экран
      */
-    
+    /*
     Console.WriteLine("Hello, World!");
     {
         Console.WriteLine("It's a nice day!");
@@ -198,7 +198,7 @@
     */
 }
 
-
+/*
 int x = 6;
 
 if (x == 1)
@@ -296,3 +296,141 @@ int DoOperation2(int x) => x switch
     2 => 2,
     _ => 0
 };
+*/
+
+/*
+// Домашняя работа. Калькулятор
+Console.WriteLine("Введите первое число: ");
+string? firstNumberString = Console.ReadLine();
+Console.WriteLine("Введите операцию (+, -, /, *): ");
+string? operation = Console.ReadLine();
+Console.WriteLine("Введите второе число: ");
+string? secondNumberString = Console.ReadLine();
+
+int firstNumber = Convert.ToInt32(firstNumberString);
+int secondNumber = Convert.ToInt32(secondNumberString);
+
+switch (operation)
+{
+    case "+":
+        Console.WriteLine($"Результат: {firstNumber + secondNumber}");
+        break;
+    case "-":
+        Console.WriteLine($"Результат: {firstNumber - secondNumber}");
+        break;
+    case "*":
+        Console.WriteLine($"Результат: {firstNumber * secondNumber}");
+        break;
+    case "/":
+        if (secondNumber == 0)
+        {
+            Console.WriteLine("Деление на 0 недопустимо");
+        }
+        else
+        {
+            Console.WriteLine($"Результат: {firstNumber / secondNumber}");
+        }
+        break;
+    default:
+        Console.WriteLine("Введены недопустимые операции");
+        break;
+
+}
+
+
+// Домашнее задание. Промежутки чисел
+Console.WriteLine("Введите число от -50 до 50: ");
+string? number = Console.ReadLine();
+int numberInt = Convert.ToInt32(number);
+
+if (numberInt < -50 || numberInt > 50)
+{
+    Console.WriteLine("Некорректное число");
+}
+else if (numberInt <= -10 && numberInt >= -40)
+{
+    Console.WriteLine("Число попадает в промежуток [-40, -10]");
+}
+else if (numberInt <= 0 && numberInt >= -9)
+{
+    Console.WriteLine("Число попадает в промежуток [-9, 0]");
+
+}
+else if (numberInt <= 10 && numberInt >= 1)
+{
+    Console.WriteLine("Число попадает в промежуток [1, 10]");
+
+}
+else if (numberInt <= 40 && numberInt >= 11)
+{
+    Console.WriteLine("Число попадает в промежуток [11, 40]");
+
+}
+else
+{
+    Console.WriteLine("Введенное число не попадает ни в один промежуток");
+}
+
+
+
+// Домашнее задание. Переводчик
+Console.WriteLine("Введите слово на русском: солнце, ветер, зима, холод, дождь, снег, туча, облака, небо, лёд");
+string? word = Console.ReadLine();
+
+switch (word)
+{
+    case "солнце":
+        Console.WriteLine("Перевод: sun");
+        break;
+    case "ветер":
+        Console.WriteLine("Перевод: wind");
+        break;
+    case "зима":
+        Console.WriteLine("Перевод: winter");
+        break;
+    case "холод":
+        Console.WriteLine("Перевод: cold");
+        break;
+    case "дождь":
+        Console.WriteLine("Перевод: rain");
+        break;
+    case "снег":
+        Console.WriteLine("Перевод: snow");
+        break;
+    case "туча":
+        Console.WriteLine("Перевод: storm cloud");
+        break;
+    case "облака":
+        Console.WriteLine("Перевод: cloud");
+        break;
+    case "небо":
+        Console.WriteLine("Перевод: sky");
+        break;
+    case "лёд":
+        Console.WriteLine("Перевод: ice");
+        break;
+    default:
+        Console.WriteLine("Для такого слова нет перевода");
+        break;
+}
+*/
+
+
+
+// Домашняя работа. Четность чисел первый вариант
+Console.WriteLine("Введите число: ");
+string? numberString = Console.ReadLine();
+
+int number1 = Convert.ToInt32(numberString);
+int result1 = number1 % 2;
+if (result1 == 0)
+{
+    Console.WriteLine("Число чётное");
+}
+else
+{
+    Console.WriteLine("Число нечётное");
+}
+
+
+
