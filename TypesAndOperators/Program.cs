@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.ComponentModel.Design;
 {
     // Это сообщение будет выведено на экран
     /* Console.WriteLine("Hello, World!");
@@ -73,7 +74,7 @@
         Console.WriteLine($"Имя: {0} Возраст: {2} Рост: {1}, name, height, age);
     */
 
-
+    /*
     Console.WriteLine("Введите свое имя:");
     string name = Console.ReadLine();
     Console.WriteLine($"Ваше имя {name}");
@@ -84,9 +85,44 @@
     Console.WriteLine($"Ваш возраст {age}");
 
 
+   double x = 10.0;
+   double z = x % 4;
+   Console.WriteLine($"Результат {z}");
 
+   byte a = 4;
+   byte resullt = (byte)(a + 70);
+   */
 
     /*
+    if (условие)
+    {
+
+    }
+    else
+    {
+
+    }
+    */
+
+
+    bool a = true;
+    bool b = false;
+
+    if (a || b)
+    {
+        Console.WriteLine("Верно");
+    }
+
+    else
+    {
+        Console.WriteLine("Не Верно");
+
+    }
+
+
+
+
+
     // Решение нашей задачи
     // Подготовка данных
     bool isWhiteBreadFresh = true;
@@ -94,6 +130,77 @@
     ushort ButterPrice = 230;
     ushort MillkPrice = 170;
     float MilkFatPercentage = 1.2F;
-    */
+    ushort iceCreamPrice = 350;
+
+    Console.Write("Введите начальную сумму: ");
+    string? sumString = Console.ReadLine();
+    short sum = Convert.ToInt16(sumString);
+
+    if (sum > 0 )
+    {
+        if (!isWhiteBreadFresh)
+        {
+            if Console.WriteLine("Батон не свежий");
+            {
+                sum = (short)(sum - WhiteBreadPrice);
+            }
+          
+        }
+        else
+        {
+            Console.WriteLine("Батон не свежий");
+        }
+
+        sum = (short)(sum - ButterPrice);
+
+        if (MilkFatPercentage == 1.2F)
+        {
+            sum = Convert.ToInt16(sum - MillkPrice);
+        }
+
+        if (sum >= iceCreamPrice) ;
+        {
+            sum = Convert.ToInt16(sum - iceCreamPrice);
+        }
+
+        Console.WriteLine($"Остаток суммы: {sum}");
+    }
+    else
+    {
+        Console.WriteLine("Сумма не может быть меньше нуля");
+    }
+}
+
+
+int x = 1;
+if (x==1)
+{
+    Console.WriteLine("1");
+}
+else if (x==2)
+{
+    Console.WriteLine("2");
+
+}
+else if (x == 3)
+{
+    Console.WriteLine("3");
+
+}
+else
+{
+    Console.WriteLine("Не соответствует условиям");
+}
+
+switch (x)
+{
+    case 1: Console.WriteLine("1");
+        break;
+    case 2: Console.WriteLine("2");
+        break;
+    case 3: Console.WriteLine("3");
+        break;
+    default: Console.WriteLine("Не соответствует условиям"); 
+        break;
 
 }
