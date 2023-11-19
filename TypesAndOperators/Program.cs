@@ -322,19 +322,19 @@ switch (operation)
         Console.WriteLine($"Результат: {firstNumber * secondNumber}");
         break;
     case "/":
-        if ( secondNumber == 0 )
+        if (secondNumber == 0)
         {
             Console.WriteLine("Деление на 0 недопустимо");
-        } 
+        }
         else
-        { 
-            Console.WriteLine($"Результат: {firstNumber / secondNumber}"); 
+        {
+            Console.WriteLine($"Результат: {firstNumber / secondNumber}");
         }
         break;
     default:
         Console.WriteLine("Введены недопустимые операции");
         break;
-        
+
 }
 
 
@@ -350,7 +350,7 @@ if (numberInt < -50 || numberInt > 50)
 else if (numberInt <= -10 && numberInt >= -40)
 {
     Console.WriteLine("Число попадает в промежуток [-40, -10]");
-} 
+}
 else if (numberInt <= 0 && numberInt >= -9)
 {
     Console.WriteLine("Число попадает в промежуток [-9, 0]");
@@ -370,3 +370,48 @@ else
 {
     Console.WriteLine("Введенное число не попадает ни в один промежуток");
 }
+
+
+
+// Домашнее задание. Переводчик
+Console.WriteLine("Введите слово на русском: солнце, ветер, зима, холод, дождь, снег, туча, облака, небо, лёд");
+string? word = Console.ReadLine();
+
+switch (word)
+{
+    case "солнце":
+        Console.WriteLine("Перевод: sun");
+        break;
+    case "ветер":
+        Console.WriteLine("Перевод: wind");
+        break;
+    case "зима":
+        Console.WriteLine("Перевод: winter");
+        break;
+    case "холод":
+        Console.WriteLine("Перевод: cold");
+        break;
+    case "дождь":
+        Console.WriteLine("Перевод: rain");
+        break;
+    case "снег":
+        Console.WriteLine("Перевод: snow");
+        break;
+    case "туча":
+        Console.WriteLine("Перевод: storm cloud");
+        break;
+    case "облака":
+        Console.WriteLine("Перевод: cloud");
+        break;
+    case "небо":
+        Console.WriteLine("Перевод: sky");
+        break;
+    case "лёд":
+        Console.WriteLine("Перевод: ice");
+        break;
+    default:
+        Console.WriteLine("Для такого слова нет перевода");
+        break;
+}
+
+
