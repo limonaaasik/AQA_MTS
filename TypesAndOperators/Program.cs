@@ -5,7 +5,7 @@
     /*
      Это сообщение будет выведено на экран
      */
-    
+    /*
     Console.WriteLine("Hello, World!");
     {
         Console.WriteLine("It's a nice day!");
@@ -198,7 +198,7 @@
     */
 }
 
-
+/*
 int x = 6;
 
 if (x == 1)
@@ -296,3 +296,42 @@ int DoOperation2(int x) => x switch
     2 => 2,
     _ => 0
 };
+*/
+
+// Домашняя работа. Калькулятор
+Console.WriteLine("Введите первое число: ");
+string? firstNumberString = Console.ReadLine();
+Console.WriteLine("Введите операцию (+, -, /, *): ");
+string? operation = Console.ReadLine();
+Console.WriteLine("Введите второе число: ");
+string? secondNumberString = Console.ReadLine();
+
+int firstNumber = Convert.ToInt32(firstNumberString);
+int secondNumber = Convert.ToInt32(secondNumberString);
+
+switch (operation)
+{
+    case "+":
+        Console.WriteLine($"Результат: {firstNumber + secondNumber}");
+        break;
+    case "-":
+        Console.WriteLine($"Результат: {firstNumber - secondNumber}");
+        break;
+    case "*":
+        Console.WriteLine($"Результат: {firstNumber * secondNumber}");
+        break;
+    case "/":
+        if ( secondNumber == 0 )
+        {
+            Console.WriteLine("Деление на 0 недопустимо");
+        } 
+        else
+        { 
+            Console.WriteLine($"Результат: {firstNumber / secondNumber}"); 
+        }
+        break;
+    default:
+        Console.WriteLine("Введены недопустимые операции");
+        break;
+        
+}
