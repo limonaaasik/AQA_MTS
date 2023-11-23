@@ -6,7 +6,7 @@ namespace StringApp     // В каком прострастве имен мы н
     {
         static  void Main(string[] args)
         {
-            /*
+            
             string message1;
             string message2 = null;
             string message3 = System.String.Empty;
@@ -27,7 +27,7 @@ namespace StringApp     // В каком прострастве имен мы н
             Console.WriteLine(s2);  // aaaaaaa
             Console.WriteLine(s3);  // world
             Console.WriteLine(s4);  // orl
-            */
+            
 
 
             // Сравнение строк
@@ -62,7 +62,13 @@ namespace StringApp     // В каком прострастве имен мы н
             Console.WriteLine(text_inter);
             Console.WriteLine(text1);
 
+            string s5 = "apple";
+            string s6 = "a day";
+            string s7 = "keeps";
 
+            string[] values = new string[] { s5, s6, s7 };
+            string str_final = string.Join(" : ", values);
+            Console.WriteLine(str_final);
 
 
         }
