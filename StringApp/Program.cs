@@ -21,9 +21,11 @@ namespace StringApp     // В каком прострастве имен мы н
             const string greetings3 = "Hello World!!";
 
             string s1 = "hello";
-            string s2 = new String('a', 6); // результатом будет строка "aaaaaa"
-            string s3 = new String(new char[] { 'w', 'o', 'r', 'l', 'd' });
-            string s4 = new String(new char[] { 'w', 'o', 'r', 'l', 'd' }, 1, 3); // orl
+            string s2 = new String('a', 6); // результатом будет строка "aaaaaa" - 6 раз повторит объект из первого параметра, то есть фактически создаст строку "aaaaaa".
+            string s3 = new String(new char[] { 'w', 'o', 'r', 'l', 'd' }); // конструктор принимает массив символов, из которых создается строка
+            string s4 = new String(new char[] { 'w', 'o', 'r', 'l', 'd' }, 1, 3); // orl конструктор позволяет создать строку из части массива символов.
+                                                                                  // Второй параметр передает начальный индекс, с которого извлкаются символы,
+                                                                                  // а третий параметр указывает на количество символов
 
             Console.WriteLine(s1);  // hello
             Console.WriteLine(s2);  // aaaaaaa
