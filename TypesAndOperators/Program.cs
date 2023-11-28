@@ -231,9 +231,9 @@ for (int i = 0; i <= array3D.GetUpperBound(0); i++)
     Console.WriteLine($"-========= Level {i} ==========-");
     for (int j = 0; j <= array3D.GetUpperBound(1); j++)
     {
-        for (int k = 0; k <= array3D.GetUpperBound(2); k++)
+        for (int k66 = 0; k66 <= array3D.GetUpperBound(2); k66++)
         {
-            Console.Write($"{array3D[i, j, k]} \t");
+            Console.Write($"{array3D[i, j, k66]} \t");
         }
         Console.WriteLine();
     }
@@ -284,7 +284,7 @@ nums[1] <-> nums[nums.Length - 1 - 1]
 nums[2] <-> nums[nums.Length - 1 - 2]
 */
 
-int n = nums.Length; // Длина массива
+int len = nums.Length; // Длина массива
 int k = n / 2;
 int tmp;
 
