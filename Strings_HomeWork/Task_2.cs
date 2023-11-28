@@ -8,7 +8,7 @@ namespace Strings_HomeWork
 {
     internal class Task_2
     {
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
             //Задание 2
             //Используя метод вывода значения в консоль, выполните конкатенацию слов и выведите на экран следующую фразу:
