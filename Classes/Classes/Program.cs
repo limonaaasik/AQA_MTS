@@ -144,7 +144,10 @@ namespace Classes
                 return 25;
             }
             
-            Console.WriteLine($"Age: {GetPersonAge()}");
+            Console.WriteLine($"Age: {GetPersonAge()}");  // Используем название метода как переменную. 
+                                                          // Она будет содержать значение, которое будет передаваться в return
+                                                          // return присвает значение, которое стоит после него в переменную метода и его потом вызывает consolewriteline 
+                                                          // поэтому метод можно использовать как переменную для вывода
             
             // -=================== Возврат нескольких значений
             (string, int) GetPersonInfo()
@@ -166,7 +169,7 @@ namespace Classes
                 return n * Factorial(n - 1);
             }
             
-            int factorial4 = Factorial(4);  // 24
+            int factorial4 = Factorial(4);  // 24 
             int factorial5 = Factorial(5);  // 120
             int factorial6 = Factorial(6);  // 720
  
@@ -176,10 +179,15 @@ namespace Classes
             
             // -=================== Классы ===================-
             // -=================== Структура класса
-            EmptyClass emptyClassObject = new EmptyClass();
+            EmptyClass emptyClassObject = new EmptyClass(); // указываем тип - переменная - new - указываем имя класса в виде метода с круглыми скобками
+                                                            
 
             Person personObj = new Person();
-            
+
+            Person personObj2 = new Person("Ксюша");
+            Person personObj3 = new Person(24);
+            Person personObj4 = new Person("Ксюша", 26);
+
             personObj.Print();
             
             personObj.name = "Alex";
