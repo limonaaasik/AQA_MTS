@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -36,13 +37,30 @@ namespace Arrays_HomeWork
 
             Console.WriteLine();
 
+            Array.Sort(nums);
+            for (int i = 0; i < nums.Length; i++)
+            {
+                Console.Write($"{nums[i]} ");
+            }
+
+
+            if (nums.Length % 2 != 0) 
+            {
+                Console.WriteLine($"Среднее значение: {nums[nums.Length / 2]}");
+            } else
+
+            {
+
+                Console.WriteLine($"Среднее значение: {nums[nums.Length / 2 - 1]}");
+                Console.WriteLine($"Среднее значение: {nums[(nums.Length / 2)]}");
+            }
             int sum = 0;
-            for (int i = 0;i < nums.Length; i++)
+            for (int i = 0; i < nums.Length; i++)
             {
                 sum = sum + nums[i];
             }
             double sred = Convert.ToDouble(sum) / nums.Length;
-            Console.WriteLine($"Среднее значение массива: {sred}") ;
+            Console.WriteLine($"Среднее значение массива: {sred}");
 
             int maxNum = Int32.MinValue;
             int minNum = Int32.MaxValue;

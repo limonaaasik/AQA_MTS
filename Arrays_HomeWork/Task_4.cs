@@ -8,7 +8,7 @@ namespace Arrays_HomeWork
 {
     internal class Task_4
     {
-        static void Main(string[] args)
+        static void Main4(string[] args)
         {
             //Задание 4
             //Создайте 2 массива из 5 чисел.
