@@ -8,9 +8,12 @@ namespace Arrays_HomeWork
 {
     internal class Task_1
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
- 
+            //Задание 1
+            //Создайте массив целых чисел. Напишете программу, которая выводит сообщение о том, 
+            //входит ли заданное число в массив или нет.Пусть число для поиска задается с консоли.
+
             int[] numbers = new int[] {1, 2, 3, 4};
             Console.WriteLine("Введите число:");
             string? num = Console.ReadLine();
