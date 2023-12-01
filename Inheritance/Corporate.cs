@@ -1,4 +1,4 @@
-public class Corporate : Client
+public class Corporate : Client // ”казываем, что Corporate - это дочерний класс от Client зписью "Corporate : Client"
 {
     public string INN;
     public string UNP;

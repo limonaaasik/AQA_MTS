@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+// Наслеование может быть только от ОДНОГО класса в C#
+
 Individual individual1 = new Individual(1);
 individual1.PhoneNumber = "+375 29 12345678";
 individual1.Email = "individual@test.com";
@@ -8,8 +10,8 @@ individual1.Lastname = "Иванов";
 individual1.Activate();
 
 Corporate corporate1 = new Corporate(1);
-corporate1.PhoneNumber = "+375 29 10000001";
-corporate1.Email = "corporate1@test.com";
+corporate1.PhoneNumber = "+375 29 10000001";    // поля, описанные в родительском классе Client
+corporate1.Email = "corporate1@test.com";   // поля, описанные в родительском классе Client
 corporate1.INN = "123123123";
 corporate1.UNP = "321321321";
 corporate1.Activate();

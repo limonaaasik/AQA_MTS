@@ -2,7 +2,7 @@
 
 using Abstraction;
 
-Client client1 = new Client();
+Client client1 = new Client(); // Создали объект (клиента 1) по шаблону класса Abstraction
 client1.Id = 1;
 client1.PhoneNumber = "+375 29 12345678";
 client1.Email = "client1@test.com";
