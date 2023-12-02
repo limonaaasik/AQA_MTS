@@ -11,7 +11,7 @@ class State
     // доступно из текущего класса и производных классов, которые определены в этом же проекте
     protected private string protectedPrivateVar = "protected private";
 
-    // доступно из текущего класса и производных классов
+    // доступно из текущего класса и производных (дочерних) классов
     protected string protectedVar = "protected";
 
     // доступно в любом месте текущего проекта
@@ -19,7 +19,7 @@ class State
 
     // доступно в любом месте текущего проекта и из классов-наследников в других проектах
     protected internal string protectedInternalVar = "protected internal";
-
+                                                          
     // доступно в любом месте программы, а также для других программ и сборок
     public string publicVar = "public";
 

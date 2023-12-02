@@ -13,7 +13,7 @@ public class Corporate : Client
         Console.WriteLine("Дорогие сотрудники компании....");
     }
 
-    public override sealed string Address
+    public override sealed string Address  // sealed - запрещает наследникам полностью менять этот метод
     {
         get
         {
