@@ -7,9 +7,9 @@ using System.Xml.Linq;
 
 namespace Classes_Homework
 {
-    internal class Program
+    internal class Program1
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Phone phone1 = new Phone();
             Phone phone2 = new Phone("+375-29-578-69-99", "Samsung");
