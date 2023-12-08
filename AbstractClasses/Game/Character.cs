@@ -13,4 +13,9 @@ public abstract class Character
     public abstract void Move();
     public abstract void Attack();
     public abstract void UseAbility();
+
+    public void PrintInfo()
+    {
+        Console.WriteLine($"{name} {level}");
+    }
 }

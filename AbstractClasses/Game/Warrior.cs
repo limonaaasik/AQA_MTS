@@ -21,4 +21,8 @@ public class Warrior : Character
         Console.WriteLine("Warrior is using ability to...");
     }
 
+    public void Test()
+    {
+        Console.WriteLine("Test");
+    }
 }

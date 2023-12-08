@@ -18,4 +18,5 @@ foreach (var character in characters)
     character.Move();
     character.Attack();
     character.UseAbility();
+    character.PrintInfo();
 }
