@@ -8,7 +8,7 @@ namespace HomeWork
 {
     internal class Program1
     {
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
 
             Patient patient1 = new Patient("Ксюша", new TreatmentPlan(3));
