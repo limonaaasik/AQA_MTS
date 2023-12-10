@@ -1,4 +1,6 @@
-﻿public class Rectangle
+﻿using HomeWork.Task_1;
+
+public class Rectangle : Figure
 {
     // блок переменных
     double x;
@@ -12,7 +14,7 @@
     }
 
     // блок методов
-    public double getSquare()
+    public override double getSquare()
     {
         double square = x * y;
         return square;

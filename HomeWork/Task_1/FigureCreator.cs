@@ -1,6 +1,6 @@
 ﻿namespace HomeWork
 {
-    public class TriangleCreator
+    public class FigureCreator
     {
         public Triangle CreateTriangle(double lengthA, double lengthB, double lengthC)
         {
@@ -53,6 +53,16 @@
 
             Triangle baseTriangle = new Triangle(lengthA, lengthB, lengthC);
             return baseTriangle;
+        }
+
+        public Rectangle CreateRectangle(double x, double y)
+        {
+            if (x == y)
+            {
+                return new Square(x);
+            }
+            else
+                return new Rectangle(x, y);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿public class Triangle
+﻿using HomeWork.Task_1;
+
+public class Triangle : Figure
 {
     // блок переменных
     public double lengthA;
@@ -14,7 +16,7 @@
     }
 
     // блок методов
-    public virtual double getSquare()
+    public override double getSquare()
     {
         double semiperimeter;
         semiperimeter = 0.5 * (lengthA + lengthB + lengthC);
