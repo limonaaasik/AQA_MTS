@@ -5,7 +5,7 @@ namespace HomeWork
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             FigureCreator creator = new FigureCreator();
             Figure[] figures = new Figure[10];
