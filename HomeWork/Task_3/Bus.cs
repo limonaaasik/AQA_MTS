@@ -9,10 +9,6 @@
             this.DepartureTime = departureTime;
             this.SeatCount = seatCount;
         }
-        public void Print()
-        {
-            Console.WriteLine($"{Number}, {PurposeOfStation}, {DepartureTime}, {SeatCount}");
-        }
 
         public override string TransportType()
         {

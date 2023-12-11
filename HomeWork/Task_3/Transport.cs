@@ -7,5 +7,9 @@
         public string DepartureTime { get; set; }   // Время отправления
         public int SeatCount { get; set; }  // Число мест
         public abstract string TransportType();
+        public void Print()
+        {
+            Console.WriteLine($"Номер: {Number}, Пункт назначения: {PurposeOfStation}, Время отправления: {DepartureTime}, Число мест: {SeatCount}");
+        }
     }
 }
