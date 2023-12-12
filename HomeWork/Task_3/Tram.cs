@@ -2,6 +2,9 @@
 {
     internal class Tram : Transport
     {
+        public Tram()
+        {
+        }
         public Tram(string purposeOfStation, int number, string departureTime, int seatCount)
         {
             this.PurposeOfStation = purposeOfStation;

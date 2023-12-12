@@ -76,6 +76,11 @@
                 }
             }
 
+            TransportService transportService = new TransportService();
+            transportService.printTransportType(new Bus());
+            transportService.printTransportType(new Tram());
+            transportService.printTransportType(new Trolleybus());
+
         }
         
 

@@ -2,6 +2,9 @@
 {
     internal class Trolleybus : Transport
     {
+        public Trolleybus()
+        {
+        }
         public Trolleybus(string purposeOfStation, int number, string departureTime, int seatCount)
         {
             this.PurposeOfStation = purposeOfStation;
