@@ -35,14 +35,26 @@
             string? purposeStationInput = Console.ReadLine();
 
             Transport comparePurposeStation = null;
+            bool found = false;
             foreach (Transport i in transport)
             {
                 if (i.PurposeOfStation == purposeStationInput)
                 {
-                    i.Print(); 
+                    i.Print();
+                    found = true;
                     break;
                 }
             }
+            
+            if (!found) 
+            {
+                Console.WriteLine("Пункт назначения, соответствующий заданным параметрам, не найден.");
+            }
+
+            Console.Write("Введите время отправление: ");
+            string? departureTimeInput = Console.ReadLine();
+
+
         }
     }
 }
