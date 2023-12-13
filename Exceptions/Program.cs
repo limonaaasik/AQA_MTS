@@ -16,14 +16,14 @@ obj.GetHashCode();
 */
 
 
-// -====================== Checked Exceptions ======================-
+// -====================== Checked Exceptions (Контролируемые исключения) ======================-
 CheckedExceptions checkedExceptions = new CheckedExceptions();
 // Uncomment для формирования ошибки
 // checkedExceptions.ReadFile("file.txt");
 
-// -====================== Unchecked Exceptions ======================-
+// -====================== Unchecked Exceptions (Неконтролируемое исключение) ======================-
 UncheckedExceptions uncheckedExceptions = new UncheckedExceptions();
-// Uncomment для формирования ошибки
+// Uncomment для формирования ошибки. Был метод, в котором установили, что второй параметр не должен быть 0, а мы передали 0.
 // uncheckedExceptions.DivideNumbers(1, 0);
 
 // -====================== Использования try -> catch -> finally ======================-
