@@ -2,6 +2,7 @@
 {
     internal abstract class Figure
     {
-        public abstract void GetSquare();
+        public abstract double GetSquare();
+        public abstract double GetPerimeter();
     }
 }
