@@ -27,7 +27,7 @@ public class ArrayListExample
 
         // Выводим элементы ArrayList
         Console.WriteLine("Элементы в ArrayList:");
-        // foreach (string item in stringList1) // Ошибка
+        // foreach (string item in stringList1) // Ошибка (типы объектов разные)
         foreach (var item in stringList) // Рекомендуемый вариант
         {
             Console.WriteLine(item);
