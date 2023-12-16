@@ -15,17 +15,17 @@
             this.expirationDate = expirationDate;
         }
 
-        public override void CheckExpirationDate()
+        public override void GetProductInfo()
         {
-            Console.WriteLine($"Информация о товаре: ");
+            Console.WriteLine($"\nИнформация о товаре: ");
             Console.WriteLine($"Название товара: {name}, Стоимость товара: {price}, Дата производства: {dateOfManufacture}, Срок годности: {expirationDate}");
         }
 
-        public override void GetProductInfo()
+        public override void CheckExpirationDate()
         {
             if ( thisDay < expirationDate ) 
             {
-                Console.WriteLine($"Товар не просрочен. Срок годности до {expirationDate}");
+                Console.WriteLine($"\nТовар не просрочен. Срок годности до {expirationDate}");
             } 
             else if (thisDay >= expirationDate)
             {

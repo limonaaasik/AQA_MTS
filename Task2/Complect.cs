@@ -47,8 +47,8 @@
 
         public override void GetProductInfo()
         {
-            Console.WriteLine($"Информация о комлекте: ");
-            Console.WriteLine($"Название комлекта: {nameComplect}, Стоимость комплекта: {GetPriceComplect()}, Перечень продуктов: ");
+            Console.WriteLine($"\nИнформация о комлекте: ");
+            Console.WriteLine($"Название комлекта: {nameComplect}, Стоимость комплекта: {GetPriceComplect()}, \nПеречень продуктов: ");
             PrintListProducts();
         }
     }
