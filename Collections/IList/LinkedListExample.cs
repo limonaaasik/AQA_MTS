@@ -7,7 +7,7 @@ public class LinkedListExample
     public void Run()
     {
         // Создаем пустой двусвязный список строк
-        LinkedList<string> linkedList = new LinkedList<string>();
+        LinkedList<string> linkedList = new LinkedList<string>();   // Capacity мы не можем использовать в (), это не массив
 
         // Добавляем элементы в конец списка
         linkedList.AddLast("apple");
@@ -22,6 +22,8 @@ public class LinkedListExample
         PrintHelper.PrintCollection(linkedList);
 
         // Используем First и Last для получения первого и последнего элемента
+        var first = linkedList.First;
+        LinkedListNode<string> last = linkedList.Last;
         Console.WriteLine($"Первый элемент: {linkedList.First.Value}");
         Console.WriteLine($"Последний элемент: {linkedList.Last.Value}");
 
@@ -33,8 +35,16 @@ public class LinkedListExample
         LinkedListNode<string> node = linkedList.Find("banana");
         Console.WriteLine($"Найденный элемент: {node?.Value}");
 
+        // Вставка перед элементом
+        linkedList.AddBefore(node, "test");
+
+        // Выводим элементы списка
+        Console.WriteLine("Элементы в списке:");
+        PrintHelper.PrintCollection(linkedList);
+
         // Используем Remove для удаления элемента
         linkedList.Remove("banana");
+        while (linkedList.Remove("banana"));    // удалит все элементы banana в коллекции
 
         // Выводим элементы после удаления
         Console.WriteLine("Элементы после удаления:");
