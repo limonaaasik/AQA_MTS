@@ -10,6 +10,7 @@ public class SortedDictionaryExample
         SortedDictionary<string, int> mySortedDictionary = new SortedDictionary<string, int>();
 
         // Добавляем элементы в сортированный словарь
+        // При добавлении элементов в SortedDictionary, они сортируются по ключу
         mySortedDictionary.Add("Apple", 10);
         mySortedDictionary.Add("Cherry", 7);
         mySortedDictionary.Add("Banana", 5);
