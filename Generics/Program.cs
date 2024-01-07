@@ -12,7 +12,7 @@ Console.WriteLine($"Tom ID: {tomId}");
 Console.WriteLine($"Bob ID: {bobId}");
 
 
-ObjectPerson objectPerson1 = new ObjectPerson(123, "Bob"); // упаковка в значения int в тип Object
+ObjectPerson objectPerson1 = new ObjectPerson(123, "Bob"); // упаковка значения int в тип Object
 int intBobId = (int)objectPerson1.Id; // Распаковка в тип int
 // string strBobId = (string)objectPerson1.Id;                  // Ошибка при выполнении
 
@@ -29,7 +29,7 @@ int intAlexId = intPerson.Id;
 string strAlexId = strPerson.Id;
 // В обоих случаях не нужна раскаковка и упаковка
 
-Company<GenericPerson<Guid>> mtCompany = new Company<GenericPerson<Guid>>(uniquePerson);
+Company<GenericPerson<Guid>> mtsCompany = new Company<GenericPerson<Guid>>(uniquePerson);
 
 // -=================== Static
 // StaticPerson.code = 123; // Ошибка - отсутствует типизация
