@@ -65,16 +65,15 @@ Messenger<EmailMessage> outlook = new Messenger<EmailMessage>();
 outlook.SendMessage(new EmailMessage("Bye World"));
 
 MessengerStruct<MessageStruct> messengerStruct = new MessengerStruct<MessageStruct>();
-// MessengerStruct<int> // Ошибка - int не struct
-// MessengerStruct<Message> // Ошибка - class не struct
+MessengerStruct<int> test1 = new MessengerStruct<int>();
+// MessengerStruct<string> test2 = new MessengerStruct<string>(); // Ошибка - class не struct
 messengerStruct.SendMessage(new MessageStruct("Struct is cool for small objects..."));
 
 MessengerClass<SmsMessage> smsMessengerClass = new MessengerClass<SmsMessage>();
-// MessengerClass<int> // Ошибка
-// MessengerClass<string> // string = class  
-smsMessengerClass.SendMessage(new SmsMessage("SMS is not actual anymore..."));
+// MessengerClass<int> test = new MessengerClass<int>(); // Ошибка - int не class
+MessengerClass<string> test = new MessengerClass<string>();
 
-// MessengerNew<SmsMessage> nMessengerNew = new MessengerNew<SmsMessage>(); // Ошибка потому что у SmsMessage нет конструктора без параметров 
+// MessengerNew<SmsMessage> smsMessengerClass1 = new MessengerNew<SmsMessage>(); // Ошибка потому что у SmsMessage нет конструктора без параметров
 MessengerNew<EmailMessage> nMessengerNew = new MessengerNew<EmailMessage>(); // Все ок
 
 // -=================== Ограничения нескольких универсальных параметров
