@@ -18,15 +18,10 @@ namespace Task1
 
         public void ShowBooks() 
         {
-            foreach (Book book in bookList)
-            {
-                book.ShowInfo();
-            }
-
             for (int i = 0; i < bookList.Count; i++)
             {
-                Console.Write(i);
-                
+                Console.Write($"{i} ");
+                ((Book)bookList[i]).ShowInfo();     // указала что для элементов i - это тип Book           
             }
         }
 
