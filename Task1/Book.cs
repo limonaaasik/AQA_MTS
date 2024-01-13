@@ -21,7 +21,7 @@ namespace Task1
 
         public void ShowInfo()
         {
-            Console.WriteLine($"Название книги:{name}, Автор книги: {author}, Год публикации: {yearPublication}");
+            Console.WriteLine($"Название книги: {name}, Автор книги: {author}, Год публикации: {yearPublication}");
         }
 
     }
