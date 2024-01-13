@@ -32,6 +32,7 @@ while ((command = Console.ReadLine().ToLower()) != "выход") //ToLower - п�
             string bookauthor = Console.ReadLine();
             library.ShowBooksByAuthor(bookauthor);
             break;
+
         case "удалить":
             Console.WriteLine("Введите индекс книги:");
             int index = Convert.ToInt32(Console.ReadLine());
