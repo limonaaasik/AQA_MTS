@@ -3,7 +3,7 @@
 Console.WriteLine("Для добавления товара напишите \"добавить\"\n" +
     "Для отображения списка товаров напишите \"показать\"\n" +
     "Для поиска товара по ID напишите \"поиск\"\n" +
-    "Для обновления стоимости или количества напишите \"обновить\"\n" + 
+    "Для обновления стоимости или количества напишите \"обновить\"\n" +
     "Для удаления товара напишите \"удалить\"\n" +
     "Для выхода из программы напишите \"выход\"\n\n" +
     "Введите команду:");
@@ -18,18 +18,34 @@ while ((command = Console.ReadLine().ToLower()) != "выход") //ToLower - п�
             {
                 ulong id;
                 Console.WriteLine("Введите ID товара (число больше 0):");
-                ulong.TryParse(Console.ReadLine(), out id);
-                Console.WriteLine("Введите название товара:");
+                if (ulong.TryParse(Console.ReadLine(), out id))
+                {
+                    Console.WriteLine("Введите название товара:");
+                }
+                else
+                {
+                    Console.WriteLine("Введен неверный ID.");
+                    break;
+                }
                 string name = Console.ReadLine();
                 double cost;
                 Console.WriteLine("Введите стоимость товара:");
-                double.TryParse(Console.ReadLine(), out cost);
+                if (double.TryParse(Console.ReadLine(), out cost))
+                {
+                    Console.WriteLine("Введите количество товара на складе:");
+                }
+                else
+                {
+                    Console.WriteLine("Введен неверный формат стоимости.");
+                    break;
+                }
                 int quantity;
-                Console.WriteLine("Введите количество товара на складе:");
-                int.TryParse(Console.ReadLine(), out quantity);
-
-                Product product = new Product(id, name, cost, quantity);
-                shop.AddProduct(product);
+                if (int.TryParse(Console.ReadLine(), out quantity))
+                {
+                    Product product = new Product(id, name, cost, quantity);
+                    shop.AddProduct(product);
+                    break;
+                }
                 break;
             }
 
@@ -41,27 +57,49 @@ while ((command = Console.ReadLine().ToLower()) != "выход") //ToLower - п�
             {
                 Console.WriteLine("Введите ID товара:");
                 ulong id;
-                ulong.TryParse(Console.ReadLine(), out id);
-                shop.ShowProductById(id);
-                break;
+                if (ulong.TryParse(Console.ReadLine(), out id))
+                {
+                    shop.ShowProductById(id);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введен неверный ID.");
+                    break;
+                }
+
             }
 
         case "обновить":
             {
                 Console.WriteLine("Введите ID товара:");
                 ulong id;
-                ulong.TryParse(Console.ReadLine(), out id);
-                shop.UpdateProduct(id);
-                break;
+                if (ulong.TryParse(Console.ReadLine(), out id))
+                {
+                    shop.UpdateProduct(id);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введен неверный ID.");
+                    break;
+                }
             }
 
         case "удалить":
             {
                 Console.WriteLine("Введите ID товара:");
                 ulong id;
-                ulong.TryParse(Console.ReadLine(), out id);
-                shop.RemoveProduct(id);
-                break;
+                if (ulong.TryParse(Console.ReadLine(), out id))
+                {
+                    shop.RemoveProduct(id);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введен неверный ID.");
+                    break;
+                }
             }
     }
     Console.WriteLine("Введите команду:");
