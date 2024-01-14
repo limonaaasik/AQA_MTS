@@ -18,10 +18,18 @@ while ((command = Console.ReadLine().ToLower()) != "выход") //ToLower - п�
             Console.WriteLine("Введите автора книги:");
             string author = Console.ReadLine();
             Console.WriteLine("Введите год публикации книги:");
-            int year = Convert.ToInt32(Console.ReadLine());
-            Book book = new Book(name, author, year);
-            library.AddBook(book);
-            break;
+            int year;
+            if (int.TryParse(Console.ReadLine(), out year))
+            {
+                Book book = new Book(name, author, year);
+                library.AddBook(book);
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Введен неверный формат года публикации");
+                break;
+            }
 
         case "показать":
             library.ShowBooks();
@@ -35,9 +43,17 @@ while ((command = Console.ReadLine().ToLower()) != "выход") //ToLower - п�
 
         case "удалить":
             Console.WriteLine("Введите индекс книги:");
-            int index = Convert.ToInt32(Console.ReadLine());
-            library.RemoveBookFromList(index);
-            break;
+            int index;
+            if (int.TryParse(Console.ReadLine(), out index))
+            {
+                library.RemoveBookFromList(index);
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Введен неверный формат индекса");
+                break;
+            }
     }
     Console.WriteLine("Введите команду:");
 }
