@@ -8,7 +8,7 @@ using Task_1;
 //свойства доступа к внутренним полям класса;
 //метод, выводящий значения внутренних полей класса.
 
-Console.WriteLine("Вывод коррдинат точек: ");
+Console.WriteLine("Вывод координат точек: ");
 
 Point<int> intPoint = new Point<int>(10, 20);
 intPoint.PrintInfo();
