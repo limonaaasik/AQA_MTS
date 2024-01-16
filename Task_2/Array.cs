@@ -12,10 +12,17 @@ namespace Task_2
 
         public void Add(T value)
         {
-            for (int item = 0; item < array.Length; item++)
+            var tmp = new List<T>(array);
+            tmp.Add(value);
+            array = tmp.ToArray();
+        }
+        public void PrintArray(T[] array)
+        {
+            for (int index = 0; index < array.Length; index++)
             {
-                array[item] = value;
+                Console.Write($"{array[index]} ");
             }
+            Console.WriteLine();
         }
     }
 }
