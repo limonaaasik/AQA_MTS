@@ -25,9 +25,10 @@ public class Example5
         Console.WriteLine(operation(10, 4)); // 40
     }
 
-    private void Test(NoParameters noParam)
+    private bool Test(NoParameters delegatvalue)
     {
-        noParam();
+        delegatvalue();
+        return true;
     }
 
     private int Add(int x, int y) => x + y;
