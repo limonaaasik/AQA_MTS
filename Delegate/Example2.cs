@@ -8,7 +8,8 @@ class Example2
     
     public void Run()
     {
-        WithParameters withParameters1 = new (ShowMessage);
+        WithParameters withParameters1 = new (ShowMessage); // переменная withParameters1 - является делегатом типа WithParameters.
+                                                            // этой переменной мы присвоили ссылку на метод
         WithParameters withParameters2 = ShowMessage;
 
         string result1 = withParameters1("Boris", "Ivan");

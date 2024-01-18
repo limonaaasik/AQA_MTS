@@ -13,7 +13,7 @@ class Example1
         NoParameters noParameters2 = new (ShowMessage);
         NoParameters noParameters3 = ShowMessage;
 
-        noParameters1();
+        noParameters1();    // типо вызываем метод
         noParameters2();
         noParameters3();
     }
