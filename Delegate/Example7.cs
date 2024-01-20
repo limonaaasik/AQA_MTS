@@ -18,7 +18,6 @@ public class Example7
         //int result2 = op.Invoke(2, 3); // ! Ошибка: делегат равен null
         int? result3 = op?.Invoke(2, 3);
     }
-    
-    private void ShowMessage() => Console.WriteLine("Have fun!"); 
+
     private int Add(int x, int y) => x + y;
 }

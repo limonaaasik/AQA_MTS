@@ -13,7 +13,7 @@ public class CurrencyExchangeMonitor
             int currentPrice = new Random().Next(100);
 
             PriceChangeHandler(currentPrice);
-            
+
             Thread.Sleep(2000);
         }
     }
