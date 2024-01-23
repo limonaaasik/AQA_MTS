@@ -14,7 +14,7 @@ public class Variables
         // Создание временных переменных
         var queryResult =
             from person in _testObjectSet
-            let yearOfBirth = (DateTime.Now.Year - person.Age)
+            let yearOfBirth = (DateTime.Now.Year - person.Age)  // let - объявляет переменную новую
             select new
             {
                 person.Name, 

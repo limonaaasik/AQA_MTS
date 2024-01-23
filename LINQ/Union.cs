@@ -12,9 +12,11 @@ public class Union
 
         // Объединение последовательностей
         // Начать с метода
+        // НЕ имеет смыла эта конструкция
         var queryResult =
             (
                 from number in _testIntSet
+                // Можно оставить, если делаете какие-то операции или преобразования
                 select number)
             .Union(
                 from number in blackList

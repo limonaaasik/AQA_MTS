@@ -14,18 +14,19 @@ public class OrderBy
         // Прямая сортировка
         var queryResult =
             from number in _testIntSet
-            orderby number
+            orderby number descending   // descending дописать, чтобы сортировка по убыванию была
             select number;
 
         var queryResult1 =
             from text in _testStringSet.List
-            orderby text
+            orderby text    
             select text;
 
         var queryResult2 =
-            from obj in _testObjectSet
-            orderby obj.Age
-            select obj;
+            from person in _testObjectSet
+            orderby person.Age, person.Name descending // я хочу двойную сортировку. Первичная - по возрасту,
+                                                       // вторичная - по имени (если есть одинаоквые записи по возрасту, отсортировать по убыванию по имени)
+            select person;
 
         foreach (var i in queryResult)
         {
@@ -37,7 +38,7 @@ public class OrderBy
         }
         foreach (var i in queryResult2)
         {
-            Console.WriteLine($"{i}");
+            Console.WriteLine($"Person: {i}");
         }
         
         // Обратная сортировка
@@ -70,35 +71,22 @@ public class OrderBy
         Console.WriteLine("Method Syntax");
         
         // Прямая сортировка
-        var queryResult = _testIntSet.OrderBy(number => number);
+        var queryResult = _testIntSet.OrderByDescending(number => number);
+        PrintHelper.Print(queryResult, item => Console.WriteLine(item)); 
 
         var queryResult1 = _testStringSet.List.OrderBy(text => text);
+        PrintHelper.Print(queryResult1, item => Console.WriteLine(item));
 
-        var queryResult2 = _testObjectSet.OrderBy(obj => obj.Age);
+        var queryResult2 = _testObjectSet.OrderBy(person => person.Age);
+        PrintHelper.Print(queryResult2, item => Console.WriteLine(item));
 
-        foreach (var i in queryResult)
-        {
-            Console.WriteLine($"Int: {i}");
-        }
-        foreach (var i in queryResult1)
-        {
-            Console.WriteLine($"String: {i}");
-        }
-        foreach (var i in queryResult2)
-        {
-            Console.WriteLine($"{i}");
-        }
-        
         // Обратная сортировка
         var queryResult3 = _testObjectSet.OrderByDescending(obj => obj.Age);
-        
-        foreach (var i in queryResult3)
-        {
-            Console.WriteLine($"{i}");
-        }
+
+        PrintHelper.Print(queryResult3, item => Console.WriteLine(item));
 
         // Множественная сортировка
-        var queryResult4 = _testObjectSet.OrderBy(obj => obj.Age).ThenByDescending(obj => obj.Name);
+        var queryResult4 = _testObjectSet.OrderBy(obj => obj.Age).ThenByDescending(obj => obj.Name);    // двойная сортировка, сначала по возрасту, потом сортирую по имени 
         
         foreach (var i in queryResult4)
         {

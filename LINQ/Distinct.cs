@@ -16,11 +16,14 @@ public class Distinct
             )
             .Distinct();
 
-        Console.WriteLine("Результат Distinct:");
-        foreach (var item in queryResult)
-        {
-            Console.WriteLine(item);
-        }
+        var queryResult5 =
+            from i in numbers
+            group i by i
+            into result
+            select result.Key;
+
+        PrintHelper.Print(queryResult, item => Console.WriteLine($"Int: {item}"));
+        PrintHelper.Print(queryResult5, item => Console.WriteLine($"Int: {item}"));
     }
 
     public void RunMethodSyntax()
