@@ -10,12 +10,6 @@ public class SkipTake
     {
         // Query Syntax
         Console.WriteLine("Query Syntax");
-
-        // First
-        var queryResult =
-            from num in _testIntSet
-            where (num == 4 || num == 6)
-            select (num);
     }
 
     public void RunMethodSyntax()
