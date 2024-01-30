@@ -1,5 +1,3 @@
-using AventStack.ExtentReports;
-
 namespace NUnitTest;
 
 public class AttributesExample
@@ -13,19 +11,20 @@ public class AttributesExample
         Console.WriteLine($"{this}: DemoTest... {x++}");
     }
 
-    [Test, Category("Example")]
+    [Test, Category("Example")] // установить категорию
     public void BigTest()
     {
         Console.WriteLine($"{this}: BigTest... {x++}");
     }
 
-    [Test, Ignore("Ignoring these tests for now.")]
+    [Test, Ignore("Ignoring these tests for now.")] // праметр для игнора теста
+                                                    // + указать причину игнорирования
     public void AlphaTest()
     {
         Console.WriteLine($"{this}: AlphaTest... {x++}");
     }
 
-    [Test, Order(1)]
+    [Test, Order(1)]    // позволяет выстраивать тесты в логическую последовательность
     public void ZTest()
     {
         Console.WriteLine($"{this}: ZTest... {x++}");
@@ -38,7 +37,7 @@ public class AttributesExample
     }
 
     [Test, Order(2)]
-    [Author("Jane Doe", "jane.doe@example.com")]
+    [Author("Jane Doe", "jane.doe@example.com")]    // записать автора теста, будет отображаться в отчетах
     [Author("Another Developer", "email@example.com")]
     public void AuthorTest()
     {
@@ -46,25 +45,25 @@ public class AttributesExample
     }
     
     [Test]
-    [Repeat(5)]
+    [Repeat(5)] //выполнить тест несколько раз
     public void RepeatTest()
     {
         Console.WriteLine($"{this}: RepeatTest... ");
     }
 
     [Test]
-    [Retry(3)]
+    [Retry(3)]  // повторить тест в случае, если он провалился
     public void RetryTest()
     {
         Console.WriteLine($"{this}: RetryTest... {++i}");
-        if (i == 3) Assert.Pass();
+        if (i == 4) Assert.Pass();
         else Assert.Fail();
     }
     
     [Test]
     public void RandomAndValuesTest(
-        [Values(1, 2, 3)] int numberInt,
-        [Random(-1.0, 1.0, 2)] double numberDouble)
+        [Values(1, 2, 3)] int numberInt,    // перебрать множество чисел (values - передаем само множество значений)
+        [Random(-1.0, 1.0, 2)] double numberDouble) // указываем от и до, количество рандомных значений
     {
         // public Random(<T> min, <T> max, int count);
         Console.WriteLine($"{this}: RandomAndValuesTest... {numberInt} {numberDouble}");
@@ -88,10 +87,10 @@ public class AttributesExample
         Console.WriteLine($"{this}: XTest... {number} {text}");
     }
     
-    [Test, MaxTime(2000)]
+    [Test, MaxTime(2000)]   // мы указываем максимальное время выполнение теста
     public void TimedTest()
     {
-        Thread.Sleep(1000);
+        Thread.Sleep(1000); // спит 1 секунду
     }
     
     [Test, Pairwise]
@@ -110,7 +109,7 @@ public class AttributesExample
         Console.WriteLine($"{this}: PropertyTest... {TestContext.CurrentContext.Test.Properties.Get("Severity")}");
     }
 
-    [Test, Severity(SeverityLevel.Major)]
+    [Test, Severity(SeverityLevel.Minor)]
     public void AdvancedPropertyTest()
     { Console.WriteLine($"{this}: PropertyTest... {TestContext.CurrentContext.Test.Properties.Get("Severity")}"); }
 }
