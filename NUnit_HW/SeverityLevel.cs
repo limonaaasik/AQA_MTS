@@ -1,9 +1,8 @@
-namespace NUnitTest;
+namespace NUnit_HW;
 
 public enum SeverityLevel
 {
     Critical,
     Major,
-    Normal,
     Minor
 }

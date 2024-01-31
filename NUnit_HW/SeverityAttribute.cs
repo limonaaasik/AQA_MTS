@@ -1,4 +1,4 @@
-namespace NUnitTest;
+namespace NUnit_HW;
 
 [AttributeUsage(AttributeTargets.Method, AllowMultiple=false)]
 public class SeverityAttribute : PropertyAttribute
