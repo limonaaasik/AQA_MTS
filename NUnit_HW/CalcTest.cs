@@ -84,7 +84,7 @@ namespace NUnit_HW
         [Severity(SeverityLevel.Critical)]
         public void CalcOnZeroInt()
         {
-            Assert.Throws<DivideByZeroException>(() => Calc.DivInt(5, 0));  // выдаст true(pass), потому что деление невозможно в интах
+            Assert.Throws<DivideByZeroException>(() => Calc.DivInt(5, 0));  // выдаст true(pass), потому что деление на нуль невозможно в интах
         }
 
         [OneTimeTearDown]
