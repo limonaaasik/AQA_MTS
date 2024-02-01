@@ -10,8 +10,9 @@ public class WebDriverTest
     public void SimpleDriverTest()
     {
         IWebDriver webDriver = new SimpleDriver().Driver;
+        webDriver.Manage().Window.Maximize();
         webDriver.Navigate().GoToUrl("http://onliner.by");
-        webDriver.Quit();
+        webDriver.Quit();   // эта команда автоматически закроет браузер и убьет процесс
     } 
 
     [Test]

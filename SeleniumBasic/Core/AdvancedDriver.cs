@@ -18,7 +18,7 @@ public class AdvancedDriver
         chromeOptions.AddArguments("--disable-extensions");
         //chromeOptions.AddArguments("--headless");
             
-        chromeOptions.SetLoggingPreference(LogType.Browser, LogLevel.All);
+        chromeOptions.SetLoggingPreference(LogType.Browser, LogLevel.All);  // логирование, все что относится к браузеру\драйверу
         chromeOptions.SetLoggingPreference(LogType.Driver, LogLevel.All);
 
         return new ChromeDriver(path + @"/Resources/", chromeOptions);
