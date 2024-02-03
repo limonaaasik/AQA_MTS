@@ -5,6 +5,9 @@ using OpenQA.Selenium;
 
 namespace NUnitTest.Tests;
 
+[Parallelizable(scope: ParallelScope.All)]  // распараллелить процессы (запуск тестов распараллелить)
+[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]   // под каждый тест создать свой инстанс (новый браузер)
+                                                    // таким образом, можно запускать несколько тестов одновременно
 public class BaseTest
 {
     protected IWebDriver Driver { get; set; }

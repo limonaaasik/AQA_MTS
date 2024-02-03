@@ -26,6 +26,7 @@ public class FirstTest : BaseTest
     public void ValidateSKF()
     {
         Driver.Navigate().GoToUrl("https://bymed.top/calc/%D1%81%D0%BA%D1%84-2148");
+        Thread.Sleep(3000); // выскакивает реклама, надо подтвердить ручками и продолжить работу
         Driver.SwitchTo().Frame(1);
         
         IWebElement selectWebElement = Driver.FindElement(By.Id("cr-size"));
