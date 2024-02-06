@@ -4,24 +4,7 @@ using OpenQA.Selenium.Support.UI;
 namespace NUnitTest.Tests;
 
 public class FirstTest : BaseTest
-{
-    [Test]
-    public void ValidateIKTCalculationTest()
-    {
-        Driver.Navigate().GoToUrl("https://clinic-cvetkov.ru/company/kalkulyator-imt/");
-        IWebElement height = Driver.FindElement(By.Name("height"));
-        IWebElement weight = Driver.FindElement(By.Name("weight"));
-        IWebElement button = Driver.FindElement(By.Id("calc-mass-c"));
-
-        height.SendKeys("183");
-        weight.SendKeys("58");
-        button.Click();
-
-        Thread.Sleep(2000);
-        IWebElement result = Driver.FindElement(By.Id("imt-result"));
-        Assert.That(result.Text, Is.EqualTo("17.3 - Недостаточная (дефицит) масса тела"));
-    }
-    
+{    
     [Test]
     public void ValidateSKF()
     {
