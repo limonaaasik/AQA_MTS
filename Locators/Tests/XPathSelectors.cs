@@ -5,7 +5,7 @@ namespace SeleniumBasic.Tests;
 
 public class XPathSelectors : BaseTest
 {
-    private static String absolutePath = "/html/body/div";
+    private static String absolutePath = "/html/body/div";  // Абсолютный путь
 
     private static String allElementsInHTMLPath = "//*"; // Все элементы на странице начиная с html - тэга
 
@@ -50,7 +50,7 @@ public class XPathSelectors : BaseTest
     private static String path2_1 = "//ul/child::li";
     private static String path2_2 = "//ul/li"; // аналог только проще
 
-    //Использование descendant - Все предки текущего узла не зависимо от уровня
+    //Использование descendant - Все предки текущего узла независимо от уровня
     private static String path3_1 = "//ul/descendant::span";
     private static String path3_2 = "//ul//span"; // аналог только проще
 
@@ -75,19 +75,19 @@ public class XPathSelectors : BaseTest
         // Абсолютный XPath
         Assert.That(Driver.FindElement(By.XPath("/html/body/div[4]/div/div[1]/div[1]/div/div[2]")).Displayed);
 
-        // Все эелемнты на странице начина с HTML
+        // Все эелемнты на странице начиная с HTML
         Driver.FindElements(By.XPath("//*"));
 
         // Аналог поиска по tagName
         Assert.That(Driver.FindElement(By.XPath("//h1")).Displayed);
 
-        // Аналог родительского div и на один уровень ниже р1
+        // Аналог родительского div и на один уровень ниже h1
         Assert.That(Driver.FindElement(By.XPath("//div/h1")).Displayed);
 
         // Аналог родительского div и на любом уровене ниже div
         Assert.That(Driver.FindElement(By.XPath("//div//div")).Displayed);
 
-        // Поиск элемента с тэгом div у которого есть аьттрибут id
+        // Поиск элемента с тэгом div у которого есть атрибут id
         Assert.That(Driver.FindElement(By.XPath("//div[@id]")).Displayed);
 
         // Поиск элемента у которого есть аттрибут id cо значением top-logo
