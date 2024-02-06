@@ -33,7 +33,7 @@ public class CssSelectorTest : BaseTest
         // Поиск всех элементов с тэгом p у которых непосредственный родитель с тэгом div
         Assert.That(Driver.FindElements(By.CssSelector("div > p")).Count, Is.EqualTo(6));
 
-        // Поиск всех элементов с тэгом p которые идут сразу за элементом с тэго ul на одном уровне
+        // Поиск всех элементов с тэгом p которые идут сразу за элементом с тэгом ul на одном уровне
         Assert.That(Driver.FindElements(By.CssSelector("ul + p")).Count, Is.EqualTo(1));
 
         // Поиск всех элементов с тэгом div которые являются братьями элементу с тэгом p
@@ -67,7 +67,7 @@ public class CssSelectorTest : BaseTest
         // Поиск всех enabled элементов
         Assert.That(Driver.FindElements(By.CssSelector(":enabled")).Count, Is.EqualTo(8));
 
-        // Поиск всех выборанных элементов
+        // Поиск всех выборанных элементов (чекбоксы выбраны)
         Assert.That(Driver.FindElements(By.CssSelector(":checked")).Count, Is.EqualTo(2));
 
         // Поиск всех элементов c пустым телом
