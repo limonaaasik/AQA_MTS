@@ -1,8 +1,8 @@
 using NUnit.Allure.Core;
 using OpenQA.Selenium;
-using SeleniumBasic.Core;
+using SauceDemo.Core;
 
-namespace SeleniumBasic.Tests;
+namespace SauceDemo.Tests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]

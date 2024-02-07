@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using System.Reflection;
 
-namespace SeleniumBasic.Helpers.Configuration
+namespace SauceDemo.Helpers.Configuration
 {
     public static class Configurator
     {
