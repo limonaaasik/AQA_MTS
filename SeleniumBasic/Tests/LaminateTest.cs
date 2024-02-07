@@ -40,14 +40,17 @@ public class LaminateTest : BaseTest
         SelectElement installationMethod = new SelectElement(Driver.FindElement(By.Id("laying_method_laminate")));
         installationMethod.SelectByValue("2");
 
-        // Поля, в которых числа считываются как символы/буквы. Закомментировала.
-        //IWebElement minCuttingLength = Driver.FindElement(By.Id("min_length_segment_id"));
-        //minCuttingLength.Clear();
-        //minCuttingLength.SendKeys("270");
+        ////// Поля, в которых числа считываются как символы/буквы. Закомментировала.
+        IWebElement minCuttingLength = Driver.FindElement(By.Id("min_length_segment_id"));
+        minCuttingLength.SendKeys(Keys.Control + "a");
+        minCuttingLength.SendKeys(Keys.Delete);
+        minCuttingLength.SendKeys("270");
 
-        //IWebElement indent = Driver.FindElement(By.Id("indent_walls_id"));
-        //indent.Clear();
-        //indent.SendKeys("12");
+
+        IWebElement indent = Driver.FindElement(By.Id("indent_walls_id"));
+        indent.SendKeys(Keys.Control + "a");
+        indent.SendKeys(Keys.Delete);
+        indent.SendKeys("12");
 
         Driver.FindElement(By.Id("btn_calculate")).Click();
         
