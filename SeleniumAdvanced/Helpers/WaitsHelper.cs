@@ -8,7 +8,6 @@ namespace NUnitTest.Helpers;
 public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
 {
     private readonly WebDriverWait _wait = new(driver, timeout);
-    private IWebDriver Driver { get; } = driver;
 
     public IWebElement WaitForVisibilityLocatedBy(By locator)
     {

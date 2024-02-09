@@ -11,7 +11,7 @@ public class AlertTests : BaseTest
 
         Driver.FindElement(By.XPath("//button[. = 'Click for JS Alert']")).Click();
 
-        IAlert alert = Driver.SwitchTo().Alert();
+        IAlert alert = Driver.SwitchTo().Alert();   // чтобы получить экземпл€р класса IAlert, нужно на него переключитьс€ SwitchTo
 
         Assert.That(alert.Text, Is.EqualTo("I am a JS Alert"));
 
