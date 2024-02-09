@@ -27,16 +27,13 @@
 
     <ItemGroup>
       <Folder Include="Helpers\" />
+      <Folder Include="Resources\" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="Resources\chromedriver" />
       <None Remove="appsettings.json" />
       <Content Include="appsettings.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
-      <None Remove="Resources\index.html" />
-      <Content Include="Resources\index.html">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
