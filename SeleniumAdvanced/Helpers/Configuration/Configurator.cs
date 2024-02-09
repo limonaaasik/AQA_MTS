@@ -1,7 +1,7 @@
-using Microsoft.Extensions.Configuration;
 using System.Reflection;
+using Microsoft.Extensions.Configuration;
 
-namespace SeleniumBasic.Helpers.Configuration
+namespace NUnitTest.Helpers.Configuration
 {
     public static class Configurator
     {
@@ -46,5 +46,7 @@ namespace SeleniumBasic.Helpers.Configuration
         }
 
         public static string? BrowserType => Configuration[nameof(BrowserType)];
+
+        public static double WaitsTimeout => Double.Parse(Configuration[nameof(WaitsTimeout)]);
     }
 }
