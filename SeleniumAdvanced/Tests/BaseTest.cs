@@ -1,9 +1,9 @@
-using NUnitTest.Core;
-using NUnitTest.Helpers;
-using NUnitTest.Helpers.Configuration;
+using SeleniumAdvanced.Core;
+using SeleniumAdvanced.Helpers;
+using SeleniumAdvanced.Helpers.Configuration;
 using OpenQA.Selenium;
 
-namespace NUnitTest.Tests;
+namespace SeleniumAdvanced.Tests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]

@@ -3,7 +3,7 @@ using System.Reflection;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
-namespace NUnitTest.Tests;
+namespace SeleniumAdvanced.Tests;
 
 public class ActionsTest : BaseTest
 {

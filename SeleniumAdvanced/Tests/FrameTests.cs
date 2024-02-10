@@ -1,8 +1,8 @@
-using NUnitTest.Helpers;
-using NUnitTest.Tests;
+using SeleniumAdvanced.Helpers;
+using SeleniumAdvanced.Tests;
 using OpenQA.Selenium;
 
-namespace SeleniumBasic.Tests;
+namespace SeleniumAdvanced.Tests;
 
 public class FrameTests : BaseTest
 {

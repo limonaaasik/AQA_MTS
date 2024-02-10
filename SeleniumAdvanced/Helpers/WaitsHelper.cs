@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 
-namespace NUnitTest.Helpers;
+namespace SeleniumAdvanced.Helpers;
 
 public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
 {
@@ -29,12 +29,12 @@ public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
         return _wait.Until(ExpectedConditions.InvisibilityOfElementLocated(locator));
     }
 
-    public bool WaitForElementInvisible(IWebElement element)
+    public bool WaitForElementInvisible(IWebElement webElement)
     {
         try
         {
             // Проверка, видим ли элемент
-            return _wait.Until(d => !element.Displayed);
+            return _wait.Until(d => !webElement.Displayed);
         }
         catch (NoSuchElementException)
         {
@@ -48,7 +48,6 @@ public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
         }
         catch (WebDriverTimeoutException)
         {
-            // Если время истекло, можно сделать что-то в этом случае, например, вывести сообщение об ошибке
             throw new WebDriverTimeoutException("Элемент не стал невидимым в течение заданного времени");
         }
     }
@@ -60,12 +59,15 @@ public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
 
     public IWebElement FluentWaitForElement(By locator)
     {
-        WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(2))
+        // Инициализация и параметризация FluentWait
+        WebDriverWait fluentWait = new WebDriverWait(driver, TimeSpan.FromSeconds(12))
         {
-            PollingInterval = TimeSpan.FromMilliseconds(50),
+            PollingInterval = TimeSpan.FromMilliseconds(50)
         };
-        wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
 
-        return wait.Until(d => Driver.FindElement(locator));
+        fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+
+        // Использование
+        return fluentWait.Until(_ => driver.FindElement(locator));
     }
 }
