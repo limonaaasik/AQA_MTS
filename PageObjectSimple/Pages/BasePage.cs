@@ -1,26 +1,29 @@
-using NUnitTest.Helpers.Configuration;
 using OpenQA.Selenium;
+using SeleniumBasic.Helpers;
+using SeleniumBasic.Helpers.Configuration;
 
-namespace PageObjectSimple.Pages;
+namespace SeleniumBasic.Pages;
 
 public abstract class BasePage
 {
-    protected IWebDriver Driver;
-
-    public BasePage(IWebDriver driver, bool openPageByUrl)
+    protected IWebDriver Driver { get; private set; }
+    protected WaitsHelper WaitsHelper { get; private set; }
+    
+    public BasePage(IWebDriver driver, bool openPageByUrl = false)
     {
         Driver = driver;
+        WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
 
         if (openPageByUrl)
         {
-            OpenPageByUrl();
+            OpenPageByURL();
         }
     }
-
-    public abstract bool IsPageOpened();
+    
     protected abstract string GetEndpoint();
-
-    private void OpenPageByUrl()
+    public abstract bool IsPageOpened();
+    
+    protected void OpenPageByURL()
     {
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL + GetEndpoint());
     }

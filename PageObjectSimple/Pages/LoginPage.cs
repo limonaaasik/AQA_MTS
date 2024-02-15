@@ -1,6 +1,7 @@
 using OpenQA.Selenium;
+using SeleniumBasic.Pages;
 
-namespace PageObjectSimple.Pages
+namespace NUnitTest.Pages
 {
     public class LoginPage : BasePage
     {
@@ -11,52 +12,47 @@ namespace PageObjectSimple.Pages
         private static readonly By PswInputBy = By.Id("password");
         private static readonly By RememberMeCheckboxBy = By.Id("rememberme");
         private static readonly By LoginInButtonBy = By.Id("button_primary");
+        private static readonly By ErrorLabelBy = By.CssSelector("[data-testid='loginErrorText']");
         
         // Инициализация класса
-        public LoginPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
-        {
-        }
-        public LoginPage(IWebDriver driver) : base(driver, false)
+        public LoginPage(IWebDriver driver) : base(driver)
         {
         }
         
-        public override bool IsPageOpened()
-        {
-            try
-            {
-                return LoginInButton().Displayed;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            
-        }
-
         protected override string GetEndpoint()
         {
             return END_POINT;
         }
 
+        public override bool IsPageOpened()
+        {
+            return LoginInButton.Displayed && EmailInput.Displayed;
+        }
+
         // Методы
-        public IWebElement EmailInput()
+        public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);  
+        public IWebElement ErrorLabel => WaitsHelper.WaitForExists(ErrorLabelBy);  
+        public IWebElement PswInput => WaitsHelper.WaitForExists(PswInputBy);
+        public IWebElement RememberMeCheckbox => WaitsHelper.WaitForExists(RememberMeCheckboxBy);  
+        public IWebElement LoginInButton => WaitsHelper.WaitForExists(LoginInButtonBy);
+
+        // Комплексные
+        public DashboardPage SuccessFulLogin(string username, string password)
         {
-            return Driver.FindElement(EmailInputBy);  
+            EmailInput.SendKeys(username);
+            PswInput.SendKeys(password);
+            LoginInButton.Click();
+
+            return new DashboardPage(Driver);
         }
 
-        public IWebElement PswInput()
+        public LoginPage IncorrectLogin(string username, string password)
         {
-            return Driver.FindElement(PswInputBy);
-        }
+            EmailInput.SendKeys(username);
+            PswInput.SendKeys(password);
+            LoginInButton.Click();
 
-        public IWebElement RememberMeCheckbox()
-        {
-            return Driver.FindElement(RememberMeCheckboxBy);  
-        }
-
-        public IWebElement LoginInButton()
-        {
-           return Driver.FindElement(LoginInButtonBy);
+            return this;
         }
     }
 }
