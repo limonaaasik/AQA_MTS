@@ -1,7 +1,7 @@
 using NUnitTest.Helpers.Configuration;
 using OpenQA.Selenium;
 
-namespace NUnitTest.Pages;
+namespace PageObjectSimple.Pages;
 
 public abstract class BasePage
 {

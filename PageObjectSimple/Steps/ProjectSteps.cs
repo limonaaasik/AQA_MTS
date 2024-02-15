@@ -1,7 +1,7 @@
-using NUnitTest.Pages;
+using PageObjectSimple.Pages;
 using OpenQA.Selenium;
 
-namespace NUnitTest.Steps;
+namespace PageObjectSimple.Steps;
 
 public class ProjectSteps : BaseStep
 {
