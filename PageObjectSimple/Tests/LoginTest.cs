@@ -1,8 +1,8 @@
 using NUnitTest.Pages;
-using SeleniumBasic.Helpers.Configuration;
-using SeleniumBasic.Pages;
+using PageObjectSimple.Helpers.Configuration;
+using PageObjectSimple.Pages;
 
-namespace SeleniumBasic.Tests;
+namespace PageObjectSimple.Tests;
 
 public class LoginTest : BaseTest
 {

@@ -1,5 +1,5 @@
 using OpenQA.Selenium;
-using SeleniumBasic.Pages;
+using PageObjectSimple.Pages;
 
 namespace NUnitTest.Pages
 {
