@@ -27,7 +27,7 @@ namespace SeleniumAdvanced_Homework.Tests
 
             alert.Accept();
 
-            Assert.That(WaitsHelper.WaitForVisibilityLocatedBy(By.CssSelector("a[target=_blank]")).Displayed);
+            Assert.That(WaitsHelper.WaitForVisibilityLocatedBy(By.LinkText("Elemental Selenium")).Displayed);
         }
     }
 }
