@@ -7,6 +7,7 @@ namespace Allure.Tests;
 [AllureFeature("Essential features")]
 public class BddAllureTest : BaseTest
 {
+    // Стандартные методы
     [Test]
     [AllureStory("Labels")]
     public void TestCreateLabel()
@@ -14,6 +15,7 @@ public class BddAllureTest : BaseTest
         Assert.That(true);
     }
 
+    // API Allure
     [Test]
     [AllureStory("Labels")]
     public void TestCreateLabelByApi()
