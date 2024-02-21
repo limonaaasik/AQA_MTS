@@ -28,12 +28,12 @@
 
     <ItemGroup>
       <None Remove="appsettings.json" />
+      <None Remove="Resources\cat_picture.jpg" />
       <Content Include="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <None Remove="Resources\chromedriver" />
-      <None Remove="Resources\download.jpeg" />
-      <Content Include="Resources\download.jpeg">
+      <Content Include="Resources\cat_picture.jpg">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
