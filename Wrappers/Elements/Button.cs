@@ -10,7 +10,7 @@ public class Button
     {
         _uiElement = new UIElement(webDriver, by);
     }
-
+     
     public Button(IWebDriver webDriver, IWebElement webElement)
     {
         _uiElement = new UIElement(webDriver, webElement);
