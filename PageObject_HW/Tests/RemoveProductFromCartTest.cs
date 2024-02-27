@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace PageObject_HW.Tests
 {
-    public class AddToCardTest : BaseTest
+    public class RemoveProductFromCartTest : BaseTest
     {
         [Test]
-        [Description("Проверка добавления товара в корзину")]
-        public void SuccessfulLoginTest()
+        [Description("Проверка удаления товара из корзины")]
+        public void RemoveProductTest()
         {
             new LoginPage(Driver).SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
-            
+
             ProductsPage productsPage = new ProductsPage(Driver);
             productsPage.AddProduct();
 
@@ -28,6 +28,11 @@ namespace PageObject_HW.Tests
             CartPage cartPage = new CartPage(Driver, true);
             Assert.That(cartPage.IsPageOpened());
             Assert.That(cartPage.ItemLabel.Text, Is.EqualTo("Sauce Labs Backpack"));
+
+            cartPage.ClickRemovebutton();
+            Assert.That(cartPage.IsPageOpened());
+            Assert.That(cartPage.ItemLabelInvisibility, Is.EqualTo(true));
+
         }
     }
 }
