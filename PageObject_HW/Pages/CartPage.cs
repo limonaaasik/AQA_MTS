@@ -15,7 +15,7 @@ namespace PageObject_HW.Pages
         private static readonly By TitleLabelBy = By.ClassName("title");
         private static readonly By ItemLabelBy = By.ClassName("inventory_item_name");
         private static readonly By RemoveButtonBy = By.Id("remove-sauce-labs-backpack");
-        private readonly By ShoppingCartBadgeBy = By.ClassName("shopping_cart_badge");
+        private static readonly By ShoppingCartBadgeBy = By.ClassName("shopping_cart_badge");
         private static readonly By CheckoutButtonBy = By.Id("checkout");
         private static readonly By ContinueShoppingButtonBy = By.Id("continue-shopping");
 
