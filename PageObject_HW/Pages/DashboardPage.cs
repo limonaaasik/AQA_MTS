@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace PageObjectSteps.Pages;
+namespace PageObject_HW.Pages;
 
 public class DashboardPage : BasePage
 {
@@ -9,10 +9,12 @@ public class DashboardPage : BasePage
     // Описание элементов
     private static readonly By TitleLabelBy = By.ClassName("page_title");
 
+    public MenuPage MenuPage;
 
     // Инициализация класса
     public DashboardPage(IWebDriver driver) : base(driver)
     {
+        MenuPage = new MenuPage(Driver);
     }
     
     protected override string GetEndpoint()

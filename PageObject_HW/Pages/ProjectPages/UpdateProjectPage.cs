@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace PageObjectSteps.Pages.ProjectPages;
+namespace PageObject_HW.Pages;
 
 public class UpdateProjectPage : BasePage
 {

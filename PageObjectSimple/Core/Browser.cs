@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using PageObjectSimple.Helpers.Configuration;
+using PageObject_HW.Helpers.Configuration;
 
-namespace PageObjectSimple.Core
+namespace PageObject_HW.Core
 {
     public class Browser
     {
