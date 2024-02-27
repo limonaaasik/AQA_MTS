@@ -36,5 +36,10 @@ namespace PageObject_HW.Pages
         public IWebElement ComleteLabel => WaitsHelper.WaitForExists(ComleteLabelBy);
         public IWebElement BackHomeButton => WaitsHelper.WaitForExists(BackHomeButtonBy);
         public bool BackHomeButtonVisible => WaitsHelper.WaitForVisibility(BackHomeButton);
+
+        public void ClickBackHomeButton()
+        {
+            BackHomeButton.Click();
+        }
     }
 }

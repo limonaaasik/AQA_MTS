@@ -44,6 +44,7 @@ namespace PageObject_HW.Pages
         public IWebElement ContinueShoppingButton => WaitsHelper.WaitForExists(ContinueShoppingButtonBy);
 
         public void ClickRemovebutton() => RemoveButton.Click();
+        public void ClickCheckoutButtonn() => CheckoutButton.Click();
         public void ClickContinueShoppingButton() => ContinueShoppingButton.Click();
     }
 }

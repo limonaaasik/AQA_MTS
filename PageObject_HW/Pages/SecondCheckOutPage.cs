@@ -39,6 +39,6 @@ namespace PageObject_HW.Pages
         public IWebElement FinishButton => WaitsHelper.WaitForExists(FinishButtonBy);
         public bool FinishButtonVisible => WaitsHelper.WaitForVisibility(FinishButton);
 
-        
+        public void ClickFinishButton() => FinishButton.Click();
     }
 }
