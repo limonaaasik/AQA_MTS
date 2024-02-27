@@ -34,14 +34,14 @@ namespace NUnitTest.Pages
         public IWebElement PswInput => WaitsHelper.WaitForExists(PswInputBy);
         public IWebElement LoginInButton => WaitsHelper.WaitForExists(LoginInButtonBy);
 
-        // Комплексные
-        public DashboardPage SuccessFulLogin(string username, string password)
+        // Комплексные методы
+        public ProductsPage SuccessFulLogin(string username, string password)
         {
             EmailInput.SendKeys(username);
             PswInput.SendKeys(password);
             LoginInButton.Click();
 
-            return new DashboardPage(Driver);
+            return new ProductsPage(Driver);
         }
 
         public LoginPage IncorrectLogin(string username, string password)
