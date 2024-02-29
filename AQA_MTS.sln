@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfInvocations", "Chain
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadableComponent", "LoadableComponent\LoadableComponent.csproj", "{5B2C2831-6012-418A-991D-E7D595B5CA61}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOfObjects", "ValueOfObjects\ValueOfObjects.csproj", "{67D41AD2-F090-474C-BC2D-991D16990FEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5B2C2831-6012-418A-991D-E7D595B5CA61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B2C2831-6012-418A-991D-E7D595B5CA61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B2C2831-6012-418A-991D-E7D595B5CA61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D41AD2-F090-474C-BC2D-991D16990FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D41AD2-F090-474C-BC2D-991D16990FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D41AD2-F090-474C-BC2D-991D16990FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D41AD2-F090-474C-BC2D-991D16990FEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
