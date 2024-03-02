@@ -1,12 +1,12 @@
-﻿using PageObject_HW.Helpers.Configuration;
-using PageObject_HW.Pages;
+﻿using Allure_HW.Helpers.Configuration;
+using Allure_HW.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PageObject_HW.Tests
+namespace Allure_HW.Tests
 {
     public class PaymentTest : BaseTest
     {

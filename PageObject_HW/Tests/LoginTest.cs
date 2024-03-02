@@ -1,8 +1,8 @@
-using PageObject_HW.Pages;
-using PageObject_HW.Helpers.Configuration;
-using PageObject_HW.Pages;
+using Allure_HW.Pages;
+using Allure_HW.Helpers.Configuration;
+using Allure_HW.Pages;
 
-namespace PageObject_HW.Tests;
+namespace Allure_HW.Tests;
 
 public class LoginTest : BaseTest
 {

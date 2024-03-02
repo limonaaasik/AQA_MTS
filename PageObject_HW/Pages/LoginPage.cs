@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
-using PageObject_HW.Pages;
+using Allure_HW.Pages;
 
-namespace PageObject_HW.Pages
+namespace Allure_HW.Pages
 {
     public class LoginPage : BasePage
     {

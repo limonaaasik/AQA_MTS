@@ -1,9 +1,9 @@
 using OpenQA.Selenium;
-using PageObject_HW.Core;
-using PageObject_HW.Helpers;
-using PageObject_HW.Helpers.Configuration;
+using Allure_HW.Core;
+using Allure_HW.Helpers;
+using Allure_HW.Helpers.Configuration;
 
-namespace PageObject_HW.Tests;
+namespace Allure_HW.Tests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PageObject_HW.Pages
+namespace Allure_HW.Pages
 {
     public class CartPage : BasePage
     {
