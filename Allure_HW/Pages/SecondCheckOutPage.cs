@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,7 @@ namespace Allure_HW.Pages
         public IWebElement FinishButton => WaitsHelper.WaitForExists(FinishButtonBy);
         public bool FinishButtonVisible => WaitsHelper.WaitForVisibility(FinishButton);
 
+        [AllureStep("Нажать на кнопку Finish после проверки заказа")]
         public void ClickFinishButton() => FinishButton.Click();
     }
 }

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,7 @@ namespace Allure_HW.Pages
         public IWebElement BackHomeButton => WaitsHelper.WaitForExists(BackHomeButtonBy);
         public bool BackHomeButtonVisible => WaitsHelper.WaitForVisibility(BackHomeButton);
 
+        [AllureStep("Нажатие на кнопку Back Home после завершения оформления заказа")]
         public void ClickBackHomeButton()
         {
             BackHomeButton.Click();

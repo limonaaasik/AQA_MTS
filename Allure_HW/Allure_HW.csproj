@@ -30,8 +30,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <None Remove="allureConfig.json" />
       <None Remove="Resources\chromedriver" />
       <None Remove="appsettings.json" />
+      <Content Include="allureConfig.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
       <Content Include="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>

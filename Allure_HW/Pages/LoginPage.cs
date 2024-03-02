@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Allure_HW.Pages;
+using NUnit.Allure.Attributes;
 
 namespace Allure_HW.Pages
 {
@@ -35,6 +36,7 @@ namespace Allure_HW.Pages
         public IWebElement LoginInButton => WaitsHelper.WaitForExists(LoginInButtonBy);
 
         // Комплексные методы
+        [AllureStep ("Успешный вход в систему")]
         public ProductsPage SuccessFulLogin(string username, string password)
         {
             EmailInput.SendKeys(username);
@@ -44,6 +46,7 @@ namespace Allure_HW.Pages
             return new ProductsPage(Driver);
         }
 
+        [AllureStep("Неверный вход в систему")]
         public LoginPage IncorrectLogin(string username, string password)
         {
             EmailInput.SendKeys(username);

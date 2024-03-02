@@ -2,9 +2,10 @@ using OpenQA.Selenium;
 using Allure_HW.Core;
 using Allure_HW.Helpers;
 using Allure_HW.Helpers.Configuration;
+using NUnit.Allure.Core;
 
 namespace Allure_HW.Tests;
-
+[AllureNUnit]
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 public class BaseTest

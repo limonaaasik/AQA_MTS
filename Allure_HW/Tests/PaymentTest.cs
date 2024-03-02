@@ -1,5 +1,7 @@
-﻿using Allure_HW.Helpers.Configuration;
+﻿using Allure.Net.Commons;
+using Allure_HW.Helpers.Configuration;
 using Allure_HW.Pages;
+using NUnit.Allure.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,12 @@ using System.Threading.Tasks;
 
 namespace Allure_HW.Tests
 {
+    [AllureSuite("Тесты на проверку оплаты товара")]
+    [AllureOwner("Makusheva Ksenya")]
     public class PaymentTest : BaseTest
     {
         [Test]
+        [AllureSeverity(SeverityLevel.critical)]
         [Description("Проверка оплаты товара")]
         public void CheckPaymentTest()
         {

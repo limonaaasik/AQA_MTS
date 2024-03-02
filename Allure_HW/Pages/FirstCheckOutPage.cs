@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +44,7 @@ namespace Allure_HW.Pages
         public IWebElement CancelButton => WaitsHelper.WaitForExists(CancelButtonBy);
 
         // Комплексные методы
+        [AllureStep("Заполнение информации для заказа")]
         public SecondCheckOutPage ContinueProductToPageTwo()
         {
             FirstNameInput.SendKeys("Ksenya");

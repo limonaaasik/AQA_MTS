@@ -1,5 +1,7 @@
-﻿using Allure_HW.Helpers.Configuration;
+﻿using Allure.Net.Commons;
+using Allure_HW.Helpers.Configuration;
 using Allure_HW.Pages;
+using NUnit.Allure.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,12 @@ using System.Threading.Tasks;
 
 namespace Allure_HW.Tests
 {
+    [AllureSuite("Тесты на проверку возможностей работы с заказом")]
+    [AllureOwner("Makusheva Ksenya")]
     public class RemoveProductFromCartTest : BaseTest
     {
         [Test]
+        [AllureSeverity(SeverityLevel.minor)]
         [Description("Проверка удаления товара из корзины")]
         public void RemoveProductTest()
         {

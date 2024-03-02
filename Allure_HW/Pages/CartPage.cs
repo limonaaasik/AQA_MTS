@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,8 +44,13 @@ namespace Allure_HW.Pages
         public IWebElement CheckoutButton => WaitsHelper.WaitForExists(CheckoutButtonBy);
         public IWebElement ContinueShoppingButton => WaitsHelper.WaitForExists(ContinueShoppingButtonBy);
 
+        [AllureStep("Нажать на кнопку Remove в корзине")]
         public void ClickRemovebutton() => RemoveButton.Click();
+
+        [AllureStep("Нажать на кнопку Checkout в корзине")]
         public void ClickCheckoutButtonn() => CheckoutButton.Click();
+
+        [AllureStep("Нажать на кнопку ContinueShopping в корзине")]
         public void ClickContinueShoppingButton() => ContinueShoppingButton.Click();
     }
 }

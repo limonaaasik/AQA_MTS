@@ -1,12 +1,17 @@
 using Allure_HW.Pages;
 using Allure_HW.Helpers.Configuration;
 using Allure_HW.Pages;
+using NUnit.Allure.Attributes;
+using Allure.Net.Commons;
 
 namespace Allure_HW.Tests;
 
+[AllureSuite("Тесты на проверку регистрации пользователя")]
+[AllureOwner("Makusheva Ksenya")]
 public class LoginTest : BaseTest
 {
     [Test]
+    [AllureSeverity(SeverityLevel.critical)]
     [Description("Проверка успешного входа в систему")]
     public void SuccessfulLoginTest()
     {
@@ -20,6 +25,7 @@ public class LoginTest : BaseTest
     }
     
     [Test]
+    [AllureSeverity(SeverityLevel.critical)]
     [Description("Проверка неуспешного входа в систему")]
     public void InvalidUsernameLoginTest()
     {
@@ -32,6 +38,7 @@ public class LoginTest : BaseTest
     }
 
     [Test]
+    [AllureSeverity(SeverityLevel.minor)]
     [Description("Проверка логина заблокированного пользователя")]
     public void LockedUserLogin()
     {

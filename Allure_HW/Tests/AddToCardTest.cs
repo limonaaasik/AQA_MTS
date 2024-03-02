@@ -1,5 +1,7 @@
-﻿using Allure_HW.Helpers.Configuration;
+﻿using Allure.Net.Commons;
+using Allure_HW.Helpers.Configuration;
 using Allure_HW.Pages;
+using NUnit.Allure.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +10,14 @@ using System.Threading.Tasks;
 
 namespace Allure_HW.Tests
 {
+    [AllureSuite("Тесты на проверку возможностей работы с заказом")]
+    [AllureOwner("Makusheva Ksenya")]
     public class AddToCardTest : BaseTest
     {
         [Test]
+        [AllureSeverity(SeverityLevel.critical)]
         [Description("Проверка добавления товара в корзину")]
-        public void SuccessfulLoginTest()
+        public void AddProductToCart()
         {
             new LoginPage(Driver).SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
             

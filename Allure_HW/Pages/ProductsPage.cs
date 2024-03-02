@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,10 @@ namespace Allure_HW.Pages
             return END_POINT;
         }
 
+        [AllureStep ("Добавление товара в корзину")]
         public void AddProduct() => AddBackpackButton.Click();
+
+        [AllureStep("Удаление товара из корзины")]
         public void RemoveProduct() => RemoveBackpackButton.Click();
     }
 }
