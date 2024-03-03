@@ -15,12 +15,10 @@ public class LoginTest : BaseTest
     [Description("Проверка успешного входа в систему")]
     public void SuccessfulLoginTest()
     {
-        // Простой вид
         LoginPage loginPage = new LoginPage(Driver);
         loginPage.SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         ProductsPage productsPage = new ProductsPage(Driver);
         
-        // Проверка 
         Assert.That(productsPage.IsPageOpened);
     }
     
@@ -29,7 +27,6 @@ public class LoginTest : BaseTest
     [Description("Проверка неуспешного входа в систему")]
     public void InvalidUsernameLoginTest()
     {
-        // Проверка
         Assert.That(
             new LoginPage(Driver)
                 .IncorrectLogin("ssdd", "")
@@ -37,6 +34,7 @@ public class LoginTest : BaseTest
             Is.EqualTo("Epic sadface: Password is required"));
     }
 
+    // Специально допустаила ошибку в логине юзера, чтобы проверить наличие скриншота при падении теста
     [Test]
     [AllureSeverity(SeverityLevel.minor)]
     [Description("Проверка логина заблокированного пользователя")]
@@ -44,7 +42,7 @@ public class LoginTest : BaseTest
     {
         Assert.That(
             new LoginPage(Driver)
-                .IncorrectLogin("locked_out_user", "secret_sauce")
+                .IncorrectLogin("locked_out_userR", "secret_sauce")
                 .ErrorLabel.Text.Trim(),
             Is.EqualTo("Epic sadface: Sorry, this user has been locked out."));
     }

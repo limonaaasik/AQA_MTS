@@ -3,6 +3,7 @@ using Allure_HW.Core;
 using Allure_HW.Helpers;
 using Allure_HW.Helpers.Configuration;
 using NUnit.Allure.Core;
+using Allure.Net.Commons;
 
 namespace Allure_HW.Tests;
 [AllureNUnit]
@@ -23,6 +24,13 @@ public class BaseTest
     [TearDown]
     public void TearDown()
     {
+        if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
+        {
+            Screenshot screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
+            byte[] scrBytes = screenshot.AsByteArray;
+
+            AllureApi.AddAttachment("errorScreenShot", "image/png", scrBytes);
+        }
         Driver.Quit();
     }
 }
