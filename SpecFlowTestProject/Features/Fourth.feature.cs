@@ -175,8 +175,8 @@ namespace SpecFlowTestProject.Features
             {
                 this.ScenarioStart();
 #line 24
-        testRunner.Given("a blog post named \"Random\" with Markdown body", "Some Title, Eh?\n===============\nHere is the first paragraph of my blog post. Lore" +
-                        "m ipsum dolor sit amet,\nconsectetur adipiscing elit.", ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("a blog post named \"Random\" with Markdown body", "Some Title, Eh?\r\n===============\r\nHere is the first paragraph of my blog post. Lo" +
+                        "rem ipsum dolor sit amet,\r\nconsectetur adipiscing elit.", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             }
             this.ScenarioCleanup();
