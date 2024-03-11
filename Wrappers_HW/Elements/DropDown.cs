@@ -38,11 +38,6 @@ namespace Wrappers_HW.Elements
             }
         }
 
-        public void SelectByValue(string value)
-        {
-            
-        }
-
         public void SelectByIndex (int index)
         {
             if (index < _items.Count)

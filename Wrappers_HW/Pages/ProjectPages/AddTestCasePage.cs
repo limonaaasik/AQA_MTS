@@ -23,7 +23,9 @@ namespace Wrappers_HW.Pages.ProjectPages
         public AddTestCasePage(IWebDriver driver) : base(driver)
         {
         }
-
+        public AddTestCasePage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
+        {
+        }
         // Атомарные Методы
         public UIElement TitlePage => new (Driver, PageTitleBy);
         public DropDown SectionDropDown => new (Driver, SectionDropDownBy);
