@@ -18,6 +18,15 @@ namespace Wrappers_HW.Tests
             AddTestCasePage testCasePage = new AddTestCasePage(Driver, true);
             Assert.That(testCasePage.IsPageOpened());
 
+            testCasePage.SectionDropDown.SelectByText("Software & Versions");
+            Thread.Sleep(2000);
+            testCasePage.TemplateDropDown.SelectByIndex(1);
+            Thread.Sleep(2000);
+            testCasePage.TypeDropDown.SelectedText();
+
+            Assert.That(testCasePage.SectionDropDown.SelectedText(), Is.EqualTo("Software & Versions"));
+            Thread.Sleep(2000);
+
         }
     }
 }

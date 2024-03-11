@@ -10,7 +10,7 @@ namespace Wrappers_HW.Pages.ProjectPages
 {
     public class AddTestCasePage : BasePage
     {
-        private static string END_POINT = "index.php?/cases/add/1";
+        private static string END_POINT = "/index.php?/cases/add/1";
 
         private static readonly By PageTitleBy = By.ClassName("page_title");
         private static readonly By SectionDropDownBy = By.Id("section_id_chzn");
@@ -27,10 +27,10 @@ namespace Wrappers_HW.Pages.ProjectPages
         {
         }
         // Атомарные Методы
-        public UIElement TitlePage => new (Driver, PageTitleBy);
-        public DropDown SectionDropDown => new (Driver, SectionDropDownBy);
-        public DropDown TemplateDropDown => new (Driver, TemplateDropDownBy);
-        public DropDown TypeDropDown => new (Driver, TypeDropDownBy);
+        public UIElement TitlePage => new(Driver, PageTitleBy);
+        public DropDown SectionDropDown => new(Driver, SectionDropDownBy);
+        public DropDown TemplateDropDown => new(Driver, TemplateDropDownBy);
+        public DropDown TypeDropDown => new(Driver, TypeDropDownBy);
         public DropDown PriorityDropDown => new DropDown(Driver, PriorityDropDownBy);
         public DropDown AssignedToDropDown => new DropDown(Driver, AssignedToDropDownBy);
         public DropDown AutomationTypeDropDown => new DropDown(Driver, AutomationTypeDropDownBy);

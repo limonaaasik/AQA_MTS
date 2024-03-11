@@ -32,13 +32,14 @@ namespace Wrappers_HW.Elements
         {
             foreach (UIElement element in _items)
             {
-                if (element.Text.Trim() == text)
+                var tmp = element.Text.Trim();
+                if (tmp == text)
                     _uiElement.Click(); // кликнуть по самому дропдауну
                     element.Click();    // кликнуть по выбранному значению в дропдауне
             }
         }
 
-        public void SelectByIndex (int index)
+        public void SelectByIndex(int index)
         {
             if (index < _items.Count)
                 _uiElement.Click();
