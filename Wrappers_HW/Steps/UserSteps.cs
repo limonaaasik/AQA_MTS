@@ -1,5 +1,6 @@
 using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
+using Wrappers_HW.Helpers.Configuration;
 using Wrappers_HW.Pages;
 
 namespace Wrappers_HW.Steps;
@@ -23,7 +24,7 @@ public class UserSteps : BaseSteps
 
         return new DashboardPage(Driver);
     }
-    
+
     public LoginPage IncorrectLogin(string username, string password)
     {
         _loginPage.EmailInput.SendKeys(username);

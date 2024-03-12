@@ -19,14 +19,13 @@ namespace Wrappers_HW.Tests
             Assert.That(testCasePage.IsPageOpened());
 
             testCasePage.SectionDropDown.SelectByText("Software & Versions");
-            Thread.Sleep(2000);
             testCasePage.TemplateDropDown.SelectByIndex(1);
-            Thread.Sleep(2000);
-            testCasePage.TypeDropDown.SelectedText();
 
-            Assert.That(testCasePage.SectionDropDown.SelectedText(), Is.EqualTo("Software & Versions"));
-            Thread.Sleep(2000);
-
+            Assert.Multiple(() =>
+            {
+                Assert.That(testCasePage.SectionDropDown.SelectedText().Trim(), Is.EqualTo("Software & Versions"));
+                Assert.That(testCasePage.TemplateDropDown.SelectedText().Trim, Is.EqualTo("Exploratory Session"));
+            });
         }
     }
 }
