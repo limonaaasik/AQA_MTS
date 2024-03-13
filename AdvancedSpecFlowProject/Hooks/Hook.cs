@@ -1,4 +1,4 @@
-using CoreProject.Core;
+ using CoreProject.Core;
 using CoreProject.Helpers.Configuration;
 using NUnit.Framework;
 
