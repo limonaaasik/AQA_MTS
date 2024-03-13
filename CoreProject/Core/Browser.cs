@@ -5,9 +5,13 @@ namespace CoreProject.Core
 {
     public class Browser
     {
-        public IWebDriver Driver { get; }
+        public IWebDriver Driver { get; private set; }
 
         public Browser()
+        {
+        }
+
+        public void SetUpDriver()
         {
             Driver = Configurator.BrowserType?.ToLower() switch
             {
