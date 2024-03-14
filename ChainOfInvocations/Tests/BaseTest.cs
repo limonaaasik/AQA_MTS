@@ -1,10 +1,10 @@
 using OpenQA.Selenium;
-using PageObjectSteps.Core;
-using PageObjectSteps.Helpers;
-using PageObjectSteps.Helpers.Configuration;
-using PageObjectSteps.Steps;
+using ChainOfInvocations_HW.Core;
+using ChainOfInvocations_HW.Helpers;
+using ChainOfInvocations_HW.Helpers.Configuration;
+using ChainOfInvocations_HW.Steps;
 
-namespace PageObjectSteps.Tests;
+namespace ChainOfInvocations_HW.Tests;
 
 //[Parallelizable(scope: ParallelScope.All)]
 //[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]

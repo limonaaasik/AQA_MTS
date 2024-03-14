@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace PageObjectSteps.Pages
+namespace ChainOfInvocations_HW.Pages
 {
     public class LoginPage : BasePage
     {
