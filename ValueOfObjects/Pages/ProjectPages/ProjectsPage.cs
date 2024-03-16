@@ -1,8 +1,9 @@
 using OpenQA.Selenium;
+using ValueOfObjects.Elements;
 
 namespace ValueOfObjects.Pages.ProjectPages;
 
-public class ProjectsPage(IWebDriver? driver, bool openByURL = false) : BasePage(driver, openByURL)
+public class ProjectsPage(IWebDriver? driver, bool openByURL) : BasePage(driver, openByURL)
 {
     private const string END_POINT = "index.php?/admin/projects/overview";
         
@@ -12,7 +13,7 @@ public class ProjectsPage(IWebDriver? driver, bool openByURL = false) : BasePage
 
     protected override bool EvaluateLoadedStatus()
     {
-        return Title.Displayed;
+        return Title.Displayed && SuccessMessage.Displayed;
     }
 
     protected override string GetEndpoint()
@@ -20,6 +21,6 @@ public class ProjectsPage(IWebDriver? driver, bool openByURL = false) : BasePage
         return END_POINT;
     }
     
-    public IWebElement Title => WaitsHelper.WaitForExists(TitleBy);
-    public IWebElement SuccessMessage => WaitsHelper.WaitForExists(SuccessMessageBy);
+    public UIElement Title => new UIElement(Driver, TitleBy);
+    public UIElement SuccessMessage => new UIElement(Driver, SuccessMessageBy);
 }
