@@ -13,11 +13,11 @@ public class ProjectSteps(IWebDriver driver) : BaseStep(driver)
 
         return dashboardPage
             .ClickAddProjectButton()
-            .InputName(Project.ProjectName)
-            .InputAnnouncement(Project.Announcement)
-            .CheckShowAnnouncementCheckbox((bool)Project.IsShowAnnouncement)
-            .ChooseProjectType(Project.ProjectTypeINT)
-            .CheckCaseApprovalsCheckbox(Project.IsTestCaseApprovals)
+            .InputName(project.ProjectName)
+            .InputAnnouncement(project.Announcement)
+            .CheckShowAnnouncementCheckbox(project.IsShowAnnouncement)
+            .ChooseProjectType(project.ProjectTypeINT)
+            .CheckCaseApprovalsCheckbox(project.IsTestCaseApprovals)
             .ClickAddButton();
     }
 }
