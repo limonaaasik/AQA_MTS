@@ -30,5 +30,8 @@ namespace ValueOfObjects.Pages
         public IWebElement PswInput => WaitsHelper.WaitForExists(PswInputBy);
         public IWebElement RememberMeCheckbox => WaitsHelper.WaitForExists(RememberMeCheckboxBy);
         public IWebElement LoginInButton => WaitsHelper.WaitForExists(LoginInButtonBy);
+
+        public void ClickLoginInButton() => LoginInButton.Click();
+        public string GetErrorLabelText() => ErrorLabel.Text.Trim();
     }
 }
