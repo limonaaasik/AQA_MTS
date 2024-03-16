@@ -26,7 +26,7 @@ namespace ValueOfObjects.Tests
 
             ProjectsPage projectsPage = _projectSteps.AddProject(newProject);
             
-            Assert.That(projectsPage)
+            Assert.That(projectsPage.)
         }
     }
 }
