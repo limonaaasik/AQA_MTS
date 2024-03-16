@@ -16,12 +16,12 @@ public class NavigationSteps : BaseStep
 
     public DashboardPage NavigateToDashboardPage()
     {
-        return new DashboardPage(Driver);
+        return new DashboardPage(Driver, true);
     }
     
     public AddProjectPage NavigateToAddProjectPage()
     {
-        return new AddProjectPage(Driver);
+        return new AddProjectPage(Driver, true);
     }
     
     public DashboardPage SuccessfulLogin(User user)

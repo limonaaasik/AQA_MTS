@@ -3,7 +3,7 @@ using ValueOfObjects.Elements;
 
 namespace ValueOfObjects.Pages.ProjectPages;
 
-public class AddProjectPage(IWebDriver? driver, bool openByURL) : ProjectBasePage(driver, openByURL)
+public class AddProjectPage(IWebDriver? driver, bool openByURL) : BasePage(driver, openByURL)
 {
     private const string END_POINT = "index.php?/admin/projects/add";
 
@@ -72,6 +72,6 @@ public class AddProjectPage(IWebDriver? driver, bool openByURL) : ProjectBasePag
     public ProjectsPage ClickAddButton()
     {
         AddButton.Click();
-        return new ProjectsPage(Driver);
+        return new ProjectsPage(Driver, true);
     }
 }

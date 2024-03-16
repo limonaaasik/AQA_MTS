@@ -35,7 +35,7 @@ namespace ValueOfObjects.Pages
         public AddProjectPage ClickAddProjectButton()
         {
             SidebarProjectsAddButton.Click();
-            return new AddProjectPage(Driver);
+            return new AddProjectPage(Driver, true);
         }
     }
 }
