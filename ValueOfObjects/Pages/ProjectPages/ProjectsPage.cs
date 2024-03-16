@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using ValueOfObjects.Elements;
+using Wrappers.Elements;
 
 namespace ValueOfObjects.Pages.ProjectPages;
 
@@ -10,6 +11,7 @@ public class ProjectsPage(IWebDriver? driver, bool openByURL) : BasePage(driver,
     // Описание элементов
     private static readonly By TitleBy = By.XPath("//*[contains(@class, 'page_title') and contains(text(), 'Projects')]");
     private static readonly By SuccessMessageBy = By.ClassName("message-success");
+    private static readonly By ProjectsTableBy = By.CssSelector("table.grid");
 
     protected override bool EvaluateLoadedStatus()
     {
@@ -23,4 +25,5 @@ public class ProjectsPage(IWebDriver? driver, bool openByURL) : BasePage(driver,
     
     public UIElement Title => new UIElement(Driver, TitleBy);
     public UIElement SuccessMessage => new UIElement(Driver, SuccessMessageBy);
+    public Table ProjectsTable => new Table(Driver, ProjectsTableBy);
 }

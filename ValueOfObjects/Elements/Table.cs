@@ -1,7 +1,5 @@
 ﻿using OpenQA.Selenium;
 using ValueOfObjects.Elements;
-using Wrappers.Helpers;
-using Wrappers.Helpers.Configuration;
 
 namespace Wrappers.Elements;
 

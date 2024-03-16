@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ValueOfObjects.Models;
+﻿using ValueOfObjects.Models;
 using ValueOfObjects.Pages.ProjectPages;
 
 namespace ValueOfObjects.Tests
@@ -25,8 +20,8 @@ namespace ValueOfObjects.Tests
             };
 
             ProjectsPage projectsPage = _projectSteps.AddProject(newProject);
-            
-            Assert.That(projectsPage.)
+
+            Assert.That(projectsPage.ProjectsTable.GetCell("Project", newProject.ProjectName, 0).Text, Is.EqualTo(newProject.ProjectName));
         }
     }
 }
