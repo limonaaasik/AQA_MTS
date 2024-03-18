@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace ValueOfObjects.Pages
+namespace ChainOfInvocations_HW.Pages
 {
     public class LoginPage(IWebDriver? driver, bool openByURL = false) : BasePage(driver, openByURL)
     {

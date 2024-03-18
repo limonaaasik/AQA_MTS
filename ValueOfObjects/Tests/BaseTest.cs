@@ -1,10 +1,10 @@
 using OpenQA.Selenium;
-using ValueOfObjects.Core;
-using ValueOfObjects.Helpers.Configuration;
-using ValueOfObjects.Models;
-using ValueOfObjects.Steps;
+using ChainOfInvocations_HW.Core;
+using ChainOfInvocations_HW.Helpers.Configuration;
+using ChainOfInvocations_HW.Models;
+using ChainOfInvocations_HW.Steps;
 
-namespace ValueOfObjects.Tests;
+namespace ChainOfInvocations_HW.Tests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]

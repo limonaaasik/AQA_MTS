@@ -2,10 +2,10 @@ using System.Collections.ObjectModel;
 using System.Drawing;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using ValueOfObjects.Helpers;
-using ValueOfObjects.Helpers.Configuration;
+using ChainOfInvocations_HW.Helpers;
+using ChainOfInvocations_HW.Helpers.Configuration;
 
-namespace ValueOfObjects.Elements;
+namespace ChainOfInvocations_HW.Elements;
 
 public class UIElement : IWebElement
 {

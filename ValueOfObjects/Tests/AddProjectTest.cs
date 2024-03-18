@@ -1,7 +1,7 @@
-﻿using ValueOfObjects.Models;
-using ValueOfObjects.Pages.ProjectPages;
+﻿using ChainOfInvocations_HW.Models;
+using ChainOfInvocations_HW.Pages.ProjectPages;
 
-namespace ValueOfObjects.Tests
+namespace ChainOfInvocations_HW.Tests
 {
     public class AddProjectTest : BaseTest
     {

@@ -1,8 +1,8 @@
 using OpenQA.Selenium;
-using ValueOfObjects.Elements;
+using ChainOfInvocations_HW.Elements;
 using Wrappers.Elements;
 
-namespace ValueOfObjects.Pages.ProjectPages;
+namespace ChainOfInvocations_HW.Pages.ProjectPages;
 
 public class ProjectsPage(IWebDriver? driver, bool openByURL) : BasePage(driver, openByURL)
 {

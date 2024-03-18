@@ -1,8 +1,8 @@
 using OpenQA.Selenium;
-using ValueOfObjects.Elements;
-using ValueOfObjects.Pages.ProjectPages;
+using ChainOfInvocations_HW.Elements;
+using ChainOfInvocations_HW.Pages.ProjectPages;
 
-namespace ValueOfObjects.Pages
+namespace ChainOfInvocations_HW.Pages
 {
     public class DashboardPage(IWebDriver? driver, bool openByURL) : BasePage(driver, openByURL)
     {

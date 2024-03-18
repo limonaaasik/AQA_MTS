@@ -1,4 +1,4 @@
-namespace ValueOfObjects.Helpers.Configuration;
+namespace ChainOfInvocations_HW.Helpers.Configuration;
 
 public class AppSettings
 {

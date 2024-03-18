@@ -1,9 +1,9 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using ValueOfObjects.Helpers;
-using ValueOfObjects.Helpers.Configuration;
+using ChainOfInvocations_HW.Helpers;
+using ChainOfInvocations_HW.Helpers.Configuration;
 
-namespace ValueOfObjects.Pages;
+namespace ChainOfInvocations_HW.Pages;
 
 public abstract class BasePage : LoadableComponent<BasePage>
 {

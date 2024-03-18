@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using ValueOfObjects.Helpers.Configuration;
+using ChainOfInvocations_HW.Helpers.Configuration;
 
-namespace ValueOfObjects.Core
+namespace ChainOfInvocations_HW.Core
 {
     public class Browser
     {

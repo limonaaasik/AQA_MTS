@@ -1,8 +1,8 @@
 using OpenQA.Selenium;
-using ValueOfObjects.Pages;
-using ValueOfObjects.Pages.ProjectPages;
+using ChainOfInvocations_HW.Pages;
+using ChainOfInvocations_HW.Pages.ProjectPages;
 
-namespace ValueOfObjects.Steps;
+namespace ChainOfInvocations_HW.Steps;
 
 public class BaseStep(IWebDriver driver)
 {

@@ -1,4 +1,4 @@
-namespace ValueOfObjects.Models;
+namespace ChainOfInvocations_HW.Models;
 
 public class Project
 {
