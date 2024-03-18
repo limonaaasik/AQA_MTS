@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfInvocations_HW", "ValueOfObjects\ChainOfInvocations_HW.csproj", "{67D41AD2-F090-474C-BC2D-991D16990FEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfInvocations_HW", "ChainOfInvocations\ChainOfInvocations_HW.csproj", "{CA786EBE-F686-458D-86FE-7FA42D6A053A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{67D41AD2-F090-474C-BC2D-991D16990FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67D41AD2-F090-474C-BC2D-991D16990FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67D41AD2-F090-474C-BC2D-991D16990FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67D41AD2-F090-474C-BC2D-991D16990FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA786EBE-F686-458D-86FE-7FA42D6A053A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA786EBE-F686-458D-86FE-7FA42D6A053A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA786EBE-F686-458D-86FE-7FA42D6A053A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA786EBE-F686-458D-86FE-7FA42D6A053A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
