@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestSharpApi", "RestSharpApi\RestSharpApi.csproj", "{F4167C86-190B-4ABB-8D91-71C2874CA5F6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestRailComplexApi", "TestRailComplexApi\TestRailComplexApi.csproj", "{21FAB326-8DA0-4F18-BCCD-E1F5B81AA9B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F4167C86-190B-4ABB-8D91-71C2874CA5F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4167C86-190B-4ABB-8D91-71C2874CA5F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4167C86-190B-4ABB-8D91-71C2874CA5F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FAB326-8DA0-4F18-BCCD-E1F5B81AA9B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FAB326-8DA0-4F18-BCCD-E1F5B81AA9B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FAB326-8DA0-4F18-BCCD-E1F5B81AA9B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FAB326-8DA0-4F18-BCCD-E1F5B81AA9B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
