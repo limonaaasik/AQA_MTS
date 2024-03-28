@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -20,7 +20,7 @@
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
-	  <PackageReference Include="coverlet.collector" Version="6.0.0"/>
+	  <PackageReference Include="coverlet.collector" Version="6.0.0" />
 	  <PackageReference Include="Selenium.Support" Version="4.17.0" />
 	  <PackageReference Include="Selenium.WebDriver" Version="4.17.0" />
 	  <PackageReference Include="SeleniumExtras.WaitHelpers" Version="1.0.2" />
@@ -34,7 +34,7 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="coverlet.collector" Version="6.0.0"/>
+        <PackageReference Include="coverlet.collector" Version="6.0.0" />
         <PackageReference Include="Selenium.Support" Version="4.17.0" />
         <PackageReference Include="Selenium.WebDriver" Version="4.17.0" />
         <PackageReference Include="SeleniumExtras.WaitHelpers" Version="1.0.2" />

@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "17f20f4f-b2b3-4472-b8bf-0931244e8052",
+		"name": "AQA_TestRail_Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19206671"
+	},
+	"item": [
+		{
+			"name": "get_project",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_url}}{{partOfUrl}}/get_project/{{project_id}}",
+					"host": [
+						"{{server_url}}{{partOfUrl}}"
+					],
+					"path": [
+						"get_project",
+						"{{project_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_url}}{{partOfUrl}}/get_projects",
+					"host": [
+						"{{server_url}}{{partOfUrl}}"
+					],
+					"path": [
+						"get_projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Project Makusheva's\",\r\n  \"announcement\": \"Test Announcement 2\",\r\n  \"show_announcement\": true,\r\n  \"suite_mode\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_url}}{{partOfUrl}}/add_project",
+					"host": [
+						"{{server_url}}{{partOfUrl}}"
+					],
+					"path": [
+						"add_project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"announcement\": \"Happy Holidays Everyone!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_url}}{{partOfUrl}}/update_project/{{project_id}}",
+					"host": [
+						"{{server_url}}{{partOfUrl}}"
+					],
+					"path": [
+						"update_project",
+						"{{project_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"announcement\": \"Happy Holidays Everyone!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_url}}{{partOfUrl}}/delete_project/{{project_id}}",
+					"host": [
+						"{{server_url}}{{partOfUrl}}"
+					],
+					"path": [
+						"delete_project",
+						"{{project_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "atrostyanko@gmail.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "password",
+			"value": "Qwertyu_1",
+			"type": "string"
+		},
+		{
+			"key": "project_id",
+			"value": "88",
+			"type": "string"
+		}
+	]
+}
