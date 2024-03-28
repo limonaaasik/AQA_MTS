@@ -1,7 +1,6 @@
 ﻿using ComplexSelenium.Specs.Drivers;
 using ComplexSelenium.Specs.PageObjects;
 using FluentAssertions;
-using TechTalk.SpecFlow;
 
 namespace ComplexSelenium.Specs.Steps
 {

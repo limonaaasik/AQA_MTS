@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvancedSpecFlowProject", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComplexSelenium.Specs", "ComplexSelenium.Specs\ComplexSelenium.Specs.csproj", "{DE53EA91-D958-4A0E-A5E0-C0552CFE3830}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_1", "Task_1\Task_1.csproj", "{3D4B2E8E-EA2C-4CED-B5E7-559A6E269BF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DE53EA91-D958-4A0E-A5E0-C0552CFE3830}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE53EA91-D958-4A0E-A5E0-C0552CFE3830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE53EA91-D958-4A0E-A5E0-C0552CFE3830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D4B2E8E-EA2C-4CED-B5E7-559A6E269BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4B2E8E-EA2C-4CED-B5E7-559A6E269BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4B2E8E-EA2C-4CED-B5E7-559A6E269BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4B2E8E-EA2C-4CED-B5E7-559A6E269BF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
